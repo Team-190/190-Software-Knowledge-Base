@@ -5,7 +5,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 const config: Config = {
-  title: 'FRC 190 Code Standards',
+  title: 'FRC 190 Software Knowledge Base',
 
   // Set the production URL of your site here
   url: 'https://team-190.github.io/',

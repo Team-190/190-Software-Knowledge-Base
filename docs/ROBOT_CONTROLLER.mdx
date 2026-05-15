@@ -1,0 +1,16 @@
+import '@site/src/css/imagemaps/imagemaps.css';
+import '@site/src/css/imagemaps/roborio.css';
+import '@site/src/css/imagemaps/imagemapcolor.css';
+import '@site/src/css/imagemaps/systemcore.css';
+
+# 🧠 Robot Controllers
+
+The robot controller is the main computer on the robot. It runs all of your robot code and connects your software to the real hardware on the robot. In modern FIRST Robotics Competition robots, teams usually use either a roboRIO or a SystemCore controller.
+
+![RoboRIO](/img/images/robotcontroller/roborio/roborio.webp)![SystemCore](/img/images/robotcontroller/systemcore/systemcore_50.webp)
+
+The robot controller is the brain of the robot. It runs your Java code, reads sensors, and sends commands to motors. Without the robot controller, the robot cannot function. When the robot powers on, the robot controller starts, launches the robot program, and continuously runs a main loop many times every second. During this loop, the robot reads sensors, processes code, and updates hardware outputs. This constant cycle is what allows the robot to perform actions during a match.
+
+The two most common robot controllers are the roboRIO and SystemCore. Both perform the same core responsibilities, but they use different hardware and system designs. The roboRIO has been the standard FRC controller for many years and includes many built-in hardware interfaces. SystemCore is newer and much more powerful, allowing teams to run more advanced software directly on the controller itself.
+
+No matter which controller is used, the overall goal stays the same. The robot controller acts as the brain of the robot, connecting software, hardware, drivers, and the field into one complete system. Understanding how the robot controller works is one of the most important parts of learning FRC software development.

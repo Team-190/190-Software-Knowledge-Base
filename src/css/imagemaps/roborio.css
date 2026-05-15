@@ -1,0 +1,166 @@
+/* RoboRIO image hotspot positions */
+
+.roborio-map .power {
+    left: 17%;
+    top: 2.5%;
+    width: 7.5%;
+    height: 13%;
+}
+
+.roborio-map .power::after {
+    content: "The main power input for the robot controller. The RoboRIO takes in unregulated power directly from the robot's power distribution panel.";
+}
+
+.roborio-map .link {
+    left: 29%;
+    top: 2%;
+    width: 10%;
+    height: 10%;
+}
+
+.roborio-map .link::after {
+    content: "A method of communication between the RoboRIO and a configuration device such as a driverstation. This port is useful for retrieving log data, updating firmware and updating NI tools.";
+}
+
+.roborio-map .usb {
+    left: 45.5%;
+    top: 1.5%;
+    width: 11.5%;
+    height: 12.5%;
+}
+
+.roborio-map .usb::after {
+    content: "The USB ports on the RoboRIO are useful for connecting various different peripheral devices. Most commonly, these ports are used to connect auxiliary CAN bus devices and storage devices used for logging.";
+}
+
+.roborio-map .ethernet {
+    left: 58.25%;
+    top: 1.75%;
+    width: 13.5%;
+    height: 14.25%;
+}
+
+.roborio-map .ethernet::after {
+    content: "The ethernet port on the RoboRIO is used to connect the robot code to the rest of the robot's network. Normally, this means connecting the ethernet port to a network switch, so the RoboRIO can communicate with other auxiliary network devices such as coprocessors, or to the robot radio.";
+}
+
+.roborio-map .spi {
+    left: 75.5%;
+    top: 1.75%;
+    width: 9%;
+    height: 16%;
+}
+
+.roborio-map .spi::after {
+    content: "The SPI port on the RoboRIO is used to connect various types of sensors. Historically, the most popular devices that was connected to this port was an external gyroscope.";
+}
+
+.roborio-map .status {
+    left: 88%;
+    top: 8%;
+    width: 13%;
+    height: 26%;
+}
+
+.roborio-map .status::after {
+    content: "The status lights on the RoboRIO show the state of the robot. See the WPILib documentation for details on status lights.";
+}
+
+.roborio-map .pwm {
+    left: 90%;
+    top: 34.25%;
+    width: 8.5%;
+    height: 55%;
+}
+
+.roborio-map .pwm::after {
+    content: "The PWM ports on the RoboRIO are used for controlling devices such as LED strips.";
+}
+
+.roborio-map .analog {
+    left: 49.75%;
+    top: 89.75%;
+    width: 23.125%;
+    height: 8%;
+}
+
+.roborio-map .analog::after {
+    content: "The Analog ports on the RoboRIO are used for reading analog sensors such as potentiometers.";
+}
+
+.roborio-map .relay {
+    left: 27.5%;
+    top: 89.75%;
+    width: 22%;
+    height: 8%;
+}
+
+.roborio-map .relay::after {
+    content: "There are multiple relay ports on the RoboRIO for use specifically with FRC legal relays to control power to auxiliary devices.";
+}
+
+.roborio-map .rsl {
+    left: 20.25%;
+    top: 91.5%;
+    width: 7.25%;
+    height: 6%;
+}
+
+.roborio-map .rsl::after {
+    content: "The RSL port is specifically for controlling the robot signal light that is required on all FRC robots.";
+}
+
+.roborio-map .mxp {
+    left: 32%;
+    top: 65.75%;
+    width: 36%;
+    height: 9%;
+}
+
+.roborio-map .mxp::after {
+    content: "The MXP port is used for interfacing with complex sensors on FRC robots such as multi axis accelerometers and gyroscopes.";
+}
+
+.roborio-map .dio {
+    left: 2%;
+    top: 34.75%;
+    width: 8%;
+    height: 55%;
+}
+
+.roborio-map .dio::after {
+    content: "The DIO ports on the RoboRIO are used for interfacing with digital sensors common with FRC robots such as beak break sensors, retroreflective sensors, and limit switches."
+}
+
+.roborio-map .rs-232 {
+    left: 2%;
+    top: 27%;
+    width: 8%;
+    height: 7%;
+}
+
+.roborio-map .rs-232::after {
+    content: "The RS-232 bus is not very common in FRC but can be used for interfacing with certain advanced ultrasonic sensors.";
+}
+
+.roborio-map .i2c {
+    left: 2%;
+    top: 19%;
+    width: 9.5%;
+    height: 7%;
+}
+
+.roborio-map .i2c::after {
+    content: "The I2C bus on the RoboRIO has an internal engineering flaw that makes it unusable on the RoboRIO, but it is designed to be used with sensors such as the REV color sensor"
+}
+
+.roborio-map .can {
+    left: 2%;
+    top: 10%;
+    width: 9%;
+    height: 8%;
+}
+
+.roborio-map .can:after {
+    content: "The CAN bus is the most used communication port on the RoboRIO and is used to connect all the different motors and CAN sensors on the robot."
+}

@@ -1,19 +1,30 @@
-# Introduction
-Welcome to the official website for the code standard guidelines of FRC 190. These standards serve as a comprehensive reference for all team members to follow when writing code for our robotics projects. Consistency and readability are crucial aspects of maintaining a high-quality codebase, and these guidelines are designed to promote best practices across all our programming endeavors.
+# FRC 190 Programming Knowledge Base
 
-## Purpose
-The purpose of this document is to establish a set of standards and conventions that ensure clarity, maintainability, and collaboration within our team's software development process. By adhering to these guidelines, we aim to:
+The FRC 190 Programming Knowledge Base is a structured training curriculum designed to teach students how to develop, understand, and maintain competition-level robot software for FIRST Robotics Competition robots. 
+This curriculum covers the full stack of robotics software engineering, starting from fundamental Java programming concepts and progressing through advanced robot architecture, control systems, localization, vision processing, and collaborative software development practices.
 
-* Enhance code readability and comprehension for all team members.
-* Facilitate seamless collaboration by maintaining consistent software styles and practices.
-* Promote efficiency and reduce errors through standardized approaches to software, documentation, and testing.
-* Cultivate a culture of excellence and professionalism in our software development efforts.
+The primary goal of the knowledge base is to develop students who can:
 
-## How to Use These Standards
-In this document, you will find detailed guidelines covering various aspects of software standards, including naming conventions, formatting rules, documentation practices, and more. When refactoring robot code, it is important to go through class by class and make sure each one is up to each of the standards listed below.
+* Independently write and maintain robot code
+* Implement new robot features and systems
+* Understand complex software architectures
+* Debug hardware and software problems efficiently
+* Collaborate effectively within a team development environment
+* Contribute to shared robotics infrastructure and libraries
+* The curriculum emphasizes both theoretical understanding and practical engineering skills. Students learn not only how robot systems work, but also why certain software architectures, control techniques, and engineering practices are used in high-performance robotics systems.
 
-We encourage all team members to actively contribute to the evolution of our code standards by suggesting improvements, reporting issues, or proposing new guidelines through the repository's [issue tracker](https://github.com/Team-190/190-Robot-Code-Standards/issues) and [pull request mechanism](https://github.com/Team-190/190-Robot-Code-Standards/pulls). Together, we can continuously refine our practices and elevate the quality of our codebase.
+## Key areas of focus include:
 
-## Robots Implemented
-* FRC 190 2024 robots, [Snapback, Whiplash](https://github.com/Team-190/2k24-Robot-Code)
-* FRC 190 2025 robots, [StackUp, Redundancy, Poot](https://github.com/Team-190/2k25-Robot-Code)
+* Java and object-oriented programming
+* FRC robot architecture using WPILib
+* Hardware abstraction and subsystem design
+* Motion control and PID systems
+* Sensor integration and NetworkTables communication
+* Vision systems and localization
+* Software engineering best practices
+* Collaborative development workflows using Git
+* Integration with shared libraries such as GompeiLib
+
+This knowledge base is important as modern FRC robots are highly complex software systems that require strong engineering discipline to develop reliably under tight competition timelines. A structured training path helps students build foundational understanding early, avoid common design mistakes, and become capable contributors much faster.
+
+By standardizing knowledge and development practices across the team, the curriculum also improves long-term code maintainability, onboarding efficiency, debugging effectiveness, and overall robot performance.

@@ -1,0 +1,65 @@
+/* hotspot colors */
+
+.hotspot.red {
+    --hotspot-color: #ff0000;
+}
+
+.hotspot.orange {
+    --hotspot-color: #ff7900;
+}
+
+.hotspot.yellow {
+    --hotspot-color: #f6be00;
+}
+
+.hotspot.lime {
+    --hotspot-color: #bfff00;
+}
+
+.hotspot.green {
+    --hotspot-color: #4cc417;
+}
+
+.hotspot.bluegreen {
+    --hotspot-color: #3eb489;
+}
+
+.hotspot.cyan {
+    --hotspot-color: #00ffff;
+}
+
+.hotspot.blue {
+    --hotspot-color: #0000ff;
+}
+
+.hotspot.purple {
+    --hotspot-color: #36013f;
+}
+
+.hotspot.indigo {
+    --hotspot-color: #4b0082;
+}
+
+.hotspot.magenta {
+    --hotspot-color: #ff00ff;
+}
+
+.hotspot.pink {
+    --hotspot-color: #ff007f;
+}
+
+.hotspot.coral {
+    --hotspot-color: #ff7f50;
+}
+
+.hotspot.crimson {
+    --hotspot-color: #990000;
+}
+
+.hotspot.black {
+    --hotspot-color: #000000;
+}
+
+.hotspot.silk {
+    --hotspot-color: #f3e3c3;
+}

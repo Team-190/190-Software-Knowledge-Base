@@ -1,0 +1,111 @@
+/* SystemCore image hotspot positions */
+
+.systemcore-map .power {
+    left: 11.5%;
+    top: 7.5%;
+    width: 7.35%;
+    height: 14%;
+}
+
+.systemcore-map .power::after {
+    content: "The main power input for the robot controller. The SystemCore takes in unregulated power directly from the robot's power distribution panel.";
+}
+
+.systemcore-map .bridge {
+    left: 19.75%;
+    top: 6.25%;
+    width: 9.25%;
+    height: 22%;
+}
+
+.systemcore-map .bridge::after {
+    content: "The bridge port on the SystemCore is used to connect to the MotionCore addon for FTC teams.";
+}
+
+.systemcore-map .link {
+    left: 29%;
+    top: 7%;
+    width: 12.25%;
+    height: 15.25%;
+}
+
+.systemcore-map .link::after {
+    content: "A method of communication between the SystemCore and a configuration device such as a driverstation. This port is useful for retrieving log data, updating firmware and updating LimeLight tools.";
+}
+
+.systemcore-map .can {
+    left: 42.5%;
+    top: 7.5%;
+    width: 45.75%;
+    height: 14%;
+}
+
+.systemcore-map .can::after {
+    content: "The CAN busses are the most used communication port on the SystemCore and is used to connect all the different motors and CAN sensors on the robot. Unlike the RoboRIO, the SystemCore has 5 different CAN busses that teams can use to separate their mechanisms.";
+}
+
+.systemcore-map .ethernet {
+    left: 80.25%;
+    top: 27.75%;
+    width: 16%;
+    height: 28.25%;
+}
+
+.systemcore-map .ethernet::after {
+    content: "The ethernet port on the SystemCore is used to connect the robot code to the rest of the robot's network. Normally, this means connecting the ethernet port to a network switch, so the SystemCore can communicate with other auxiliary network devices such as coprocessors, or to the robot radio.";
+}
+
+.systemcore-map .i2c {
+    left: 83%;
+    top: 64.35%;
+    width: 12.25%;
+    height: 22%;
+}
+
+.systemcore-map .i2c::after {
+    content: "The I2C bus on the SystemCore is designed to be used with sensors such as the REV color sensor.";
+}
+
+.systemcore-map .usb {
+    left: 52%;
+    top: 64.5%;
+    width: 31%;
+    height: 29%;
+}
+
+.systemcore-map .usb::after {
+    content: "The USB ports on the SystemCore are useful for connecting various different peripheral devices. Most commonly, these ports are used to connect auxiliary CAN bus devices and storage devices used for logging.";
+}
+
+.systemcore-map .smartio {
+    left: 13.75%;
+    top: 77%;
+    width: 32.5%;
+    height: 18.5%;
+}
+
+.systemcore-map .smartio::after {
+    content: "The smart IO ports on the SystemCore are meant as replacements for the analog and digital ports on the RoboRIO. These ports are capable of being switched based on what sensor is attached."
+}
+
+.systemcore-map .rsl {
+    left: 4.5%;
+    top: 71.5%;
+    width: 7.75%;
+    height: 15%;
+}
+
+.systemcore-map .rsl::after {
+    content: "The RSL port is specifically for controlling the robot signal light that is required on all FRC robots.";
+}
+
+.systemcore-map .status {
+    left: 26.75%;
+    top: 31%;
+    width: 25.5%;
+    height: 24%;
+}
+
+.systemcore-map .status::after {
+    content: "The status lights on the SystemCore show the state of the robot. See the WPILib documentation for details on status lights.";
+}
