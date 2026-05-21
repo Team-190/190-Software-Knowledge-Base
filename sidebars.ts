@@ -25,8 +25,7 @@ const sidebars: SidebarsConfig = {
             'hardware_context/robot_controller/SYSTEMCORE'
           ],
         },
-          'hardware_context/RADIO',
-          'hardware_context/FMS'
+          'hardware_context/RADIO'
       ],
     },
     {
@@ -43,10 +42,18 @@ const sidebars: SidebarsConfig = {
           label: '🧑‍💻 Fundamental Concepts',
           link: {
             type: 'doc',
-            id: 'java/FUNDAMENTALS',
+            id: 'java/fundamentals/DATA_TYPES',
           },
           collapsed: true,
-          items: [],
+          items: [
+              'java/fundamentals/DATA_TYPES',
+              'java/fundamentals/VARIABLES',
+              'java/fundamentals/CONSTANTS',
+              'java/fundamentals/EXPRESSIONS',
+              'java/fundamentals/OPERATORS',
+              'java/fundamentals/TYPE_CASTING',
+              'java/fundamentals/IO'
+          ],
         },
         {
           type: 'category',
