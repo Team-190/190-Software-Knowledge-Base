@@ -1,3 +1,5 @@
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # RoboRIO
 
 The RoboRIO was the robot controller for FRC robots from 2015 to 2026. The RoboRIO has 2 variants, aptly named the RoboRIO 1.0 and the RoboRIO 2.0. The RoboRIO 1.0 was the original RoboRIO introduced in 2015, but as robot code became more involved into the 2020s, the RoboRIO 1.0 began to struggle to keep up with the higher processing and memory load as teams began to run more intensive code.
@@ -8,7 +10,7 @@ Hover over each feature to see what it does. Click on a feature to see more rele
 
 <div className="image-map-container roborio-map">
     <img
-        src="img/images/robotcontroller/roborio/roborio2x.webp"
+        src={useBaseUrl('img/images/robotcontroller/roborio/roborio2x.webp')}
         alt="RoboRIO"
         className="image-map-base"
     />
@@ -55,7 +57,7 @@ The RoboRIO runs a web server to set things like network settings. This uses a l
 
 <div>
     <img
-        src="img/images/robotcontroller/roborio/roborioteamnumbersetter.webp"
+        src={useBaseUrl("img/images/robotcontroller/roborio/roborioteamnumbersetter.webp")}
         alt="teamnumbersetter"
     />
 </div>
@@ -86,7 +88,7 @@ sleep 1
 ## Technical Specifications
 
 <iframe
-    src="img/images/robotcontroller/roborio/roborio_2_0_embedded_controller_for_frc_specifications_2026-05-15-02-12-22.pdf"
+    src={useBaseUrl("img/images/robotcontroller/roborio/roborio_2_0_embedded_controller_for_frc_specifications_2026-05-15-02-12-22.pdf")}
     width="100%"
     height="800"
     style={{ border: "none" }}
