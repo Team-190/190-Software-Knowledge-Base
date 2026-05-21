@@ -85,7 +85,7 @@
 }
 
 .systemcore-map .smartio::after {
-    content: "The smart IO ports on the SystemCore are meant as replacements for the analog and digital ports on the RoboRIO. These ports are capable of being switched based on what sensor is attached."
+    content: "The smart IO ports on the SystemCore are meant as replacements for the analog and digital ports on the RoboRIO. These ports are capable of being rebound in software based on what sensor is attached."
 }
 
 .systemcore-map .rsl {

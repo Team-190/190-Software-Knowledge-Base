@@ -1,0 +1,93 @@
+# RoboRIO
+
+The RoboRIO was the robot controller for FRC robots from 2015 to 2026. The RoboRIO has 2 variants, aptly named the RoboRIO 1.0 and the RoboRIO 2.0. The RoboRIO 1.0 was the original RoboRIO introduced in 2015, but as robot code became more involved into the 2020s, the RoboRIO 1.0 began to struggle to keep up with the higher processing and memory load as teams began to run more intensive code.
+
+In response to this, National Instruments released the RoboRIO 2.0 in 2022 which featured more memory and CPU to keep up with advanced FRC software needs.
+
+Hover over each feature to see what it does. Click on a feature to see more relevant information!
+
+<div className="image-map-container roborio-map">
+    <img
+        src="img/images/robotcontroller/roborio/roborio2x.webp"
+        alt="RoboRIO"
+        className="image-map-base"
+    />
+    <a href="#power" className="hotspot power red"/>
+    <a href="#link" className="hotspot link orange"/>
+    <a href="#usb" className="hotspot usb yellow"/>
+    <a href="#ethernet" className="hotspot ethernet lime"/>
+    <a href="#spi" className="hotspot spi green"/>
+    <a href="#status" className="hotspot status black"/>
+    <a href="#pwm" className="hotspot pwm cyan"/>
+    <a href="#analog" className="hotspot analog blue"/>
+    <a href="#relay" className="hotspot relay purple"/>
+    <a href="#rsl" className="hotspot rsl indigo"/>
+    <a href="#mxp" className="hotspot mxp silk"/>
+    <a href="#dio" className="hotspot dio magenta"/>
+    <a href="#rs232" className="hotspot rs-232 pink"/>
+    <a href="#i2c" className="hotspot i2c coral"/>
+    <a href="#can" className="hotspot can crimson"/>
+</div>
+
+For more information about communication protocols see COMMUNICATION_PROTOCOLS
+
+## Tips, Tricks, and Documentation
+
+### Imaging
+
+The RoboRIO imaging documentation is located here:
+
+RoboRIO 1: https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-3/imaging-your-roborio.html
+
+RoboRIO 2: https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-3/roborio2-imaging.html
+
+### RoboRIO 1 Crashes
+
+Modern FRC software projects use a lot of memory and CPU, which can cause the RoboRIO 1 to crash. Here are a few ways to mitigate crashes
+
+#### Web Server
+
+:::warning
+Do not do perform this optimization unless you have already set your RoboRIO's static IP address and any comments.
+:::
+
+The RoboRIO runs a web server to set things like network settings. This uses a lot of memory, which can cause the RoboRIO 1.0 to crash. After initial setup, you can use the RoboRIO team number setter utility to disable the RoboRIO web server:
+
+<div>
+    <img
+        src="img/images/robotcontroller/roborio/roborioteamnumbersetter.webp"
+        alt="teamnumbersetter"
+    />
+</div>
+https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/roborio-team-number-setter/index.html
+
+#### LVRT
+
+There is a script on the RoboRIO called LVRT, which calls is responsible for starting a script called ```frcRunRobot.sh```. The built-in LVRT script is known to use a lot of the RoboRIO's CPU, so a custom script was developed that uses fewer resources. Here are the steps to install it:
+
+1. SSH into the RoboRIO: https://docs.wpilib.org/en/stable/docs/software/roborio-info/roborio-ssh.html#ssh
+2. Replace /etc/init.d/lvrt with the following script:
+```
+#!/bin/sh
+APP_PATH=`nirtcfg --file /etc/natinst/share/lvrt.conf --get section=LVRT,token=RTTarget.ApplicationPath`
+if [ "$APP_PATH" != /home/lvuser/natinst/bin/TBLStartupApp.rtexe ]
+then
+  exec -a lvrt ./ni-lvrt
+fi
+APP_BOOT=`nirtcfg --file /etc/natinst/share/lvrt.conf --get section=LVRT,token=RTTarget.LaunchAppAtBoot,value=true | tr "[:upper:]" "[:lower:]"`
+APP_DISABLED=`nirtcfg --get section=SYSTEMSETTINGS,token=NoApp.enabled,value=false | tr "[:upper:]" "[:lower:]"`
+if [ "$APP_BOOT" = true ] && [ "$APP_DISABLED" = false ]
+then
+  . /usr/local/frc/bin/frcRunRobot.sh 2>&1 >/dev/null
+fi
+sleep 1
+```
+
+## Technical Specifications
+
+<iframe
+    src="img/images/robotcontroller/roborio/roborio_2_0_embedded_controller_for_frc_specifications_2026-05-15-02-12-22.pdf"
+    width="100%"
+    height="800"
+    style={{ border: "none" }}
+/>
