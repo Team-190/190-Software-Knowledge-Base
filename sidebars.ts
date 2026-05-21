@@ -345,7 +345,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
-          label: '🎯 Pose Estimation',
+          label: '📍 Pose Estimation',
           link: {
             type: 'doc',
             id: 'vision_localization/POSE_ESTIMATION',
@@ -355,7 +355,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
-          label: '📍 Sensor Fusion',
+          label: '🎯 Sensor Fusion',
           link: {
             type: 'doc',
             id: 'vision_localization/SENSOR_FUSION',
