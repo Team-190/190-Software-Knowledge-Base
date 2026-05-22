@@ -49,14 +49,14 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: '190 Code Standard',
+      title: '190 Software Knowledge Base',
       logo: {
         src: 'img/team190_hat_FINAL2.svg',
       },
 
       items: [
         {
-          href: 'https://github.com/Team-190/190-Robot-Code-Standards',
+          href: 'https://github.com/Team-190/190-Software-Knowledge-Base',
           label: 'GitHub',
           position: 'right',
         },
