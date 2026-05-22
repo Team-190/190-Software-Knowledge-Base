@@ -46,7 +46,9 @@ const sidebars: SidebarsConfig = {
           },
           collapsed: true,
           items: [
+              'java/fundamentals/PROGRAM_SKELETON',
               'java/fundamentals/DATA_TYPES',
+              'java/fundamentals/FLOATING_POINT',
               'java/fundamentals/VARIABLES',
               'java/fundamentals/CONSTANTS',
               'java/fundamentals/EXPRESSIONS',
