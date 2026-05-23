@@ -140,8 +140,6 @@ This tradeoff is acceptable for many applications such as:
 - scientific calculations
 - robotics
 
-but it can become a problem in situations where exact precision is required, such as financial calculations.
-
 <img
 src={useBaseUrl("img/images/javafundamentals/friendsmeme.webp")}
 alt="friends"
