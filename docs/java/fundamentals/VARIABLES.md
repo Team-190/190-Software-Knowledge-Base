@@ -108,13 +108,14 @@ When assigning a variable's value to a primitive variable, the value is copied.
 int i = 1;
 int j = i; // The variable j would be equal to i, which is 1
 
-j += 2;
+i += 2;
+
 System.out.print(i + " " + j);
 ```
 Output:
 
 ```text
-1 3
+3 1
 ```
 
 However, for a reference variable, the handle is copied, meaning that the reference type
@@ -126,10 +127,12 @@ String greeting2 = greeting;
 greeting2 += ", hello";
 
 System.out.print(greeting);
+System.out.print(greeting2);
 ```
 Output:
 
 ```text
+hi
 hi, hello
 ```
 
@@ -148,8 +151,8 @@ reference variables, their addresses are compared.
 int i = 1;
 int j = 1;
 
-int greeting = "hi";
-int greeting2 = "hi";
+String greeting = new String("hi");
+String greeting2 = new String("hi");
 
 if (i == j)
   System.out.println("i and j are equal");
@@ -167,8 +170,6 @@ Output:
 i and j are equal
 the greetings are not equal
 ```
-
-
 
 To compare reference variables, you must use the `equals()` method. More on this in the Control Flow and 
 Object-Oriented Programming sections.
