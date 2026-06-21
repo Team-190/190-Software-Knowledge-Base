@@ -198,14 +198,14 @@ Java syntax requires strict adherence to rules, and FRC 190 has some standard st
 - Names cannot have spaces
 - Floating point literals default to `double`. To differentiate a float from a double, you must add an `f` suffix, and to differentiate
   a long from an integer, add an `L` suffix (java automatically handles this, however)
-  - ```float velocityRadiansPerSecond = 0.5f; ```
+  - ```float velocityMetersPerSecond = 0.5f; ```
   - ```long bigNumber = 4500000000L;```
 
 ### Conventions
 
 - Names should use camelCase: `numMotors` instead of `NumMotors`
 - Names should be descriptive: `numMotors` instead of `nM`
-- Names should have units: `velocityRadiansPerSecond` instead of `velocity`;
+- Names should have units: `velocityMetersPerSecond` instead of `velocity`;
 - Constants (see next section) are in all caps: `ROLLER_SLOW_VOLTAGE` instead of `rollerSlowVoltage`
 
 
