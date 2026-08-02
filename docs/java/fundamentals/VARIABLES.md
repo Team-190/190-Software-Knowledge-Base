@@ -23,7 +23,7 @@ Structures sections
 
 <img
 src={useBaseUrl("img/images/javafundamentals/primitive-vs-reference.png")}
-alt="primitive-reference"
+alt="primitive-vs-reference"
 />
 
 In this section, we'll focus primarily on the primitive variables.

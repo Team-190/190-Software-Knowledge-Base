@@ -21,5 +21,5 @@ Java standardizes an entry point where all programs written in the language star
 
 <img
 src={useBaseUrl("img/images/javafundamentals/fireship-java-java.gif")}
-alt="chrisevans"
+alt="fireship-java-java"
 />

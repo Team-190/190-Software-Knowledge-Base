@@ -10,7 +10,7 @@ Before we can talk about types of data, we need to talk about how data is stored
     
 <img
     src={useBaseUrl("img/images/javafundamentals/chris-evans-blames-electricity.gif")}
-    alt="chrisevans"
+    alt="y2k2"
 />
 
 While a single bit is useful, computers almost never work with just one bit at a time. Instead, bits are grouped together into larger chunks called **bytes**. A byte is made up of 8 bits. Since each bit can be either a 0 or a 1, a byte can store 256 different combinations of values.
@@ -58,7 +58,7 @@ Larger data types can store larger numbers because they contain more bits.
 
 <img
 src={useBaseUrl("img/images/javafundamentals/y2k2.webp")}
-alt="chrisevans"
+alt="y2k2"
 />
 
 ## Decimal Numbers
@@ -90,7 +90,7 @@ Characters are also stored using bytes. Each character is assigned a numeric cod
 
 <img
 src={useBaseUrl("img/images/javafundamentals/ascii-table.webp")}
-alt="ascii"
+alt="ascii-table"
 />
 
 For example:
