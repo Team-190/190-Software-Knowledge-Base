@@ -28,7 +28,7 @@ and stores it in the variable on the left side.
 
 Combine numeric values using arithmetic operators (`+`, `-`, `*`, `/`, `%`).
 
-```
+```java
 int totalMotors = 4 + 2; // Evaluates to 6
 ```
 
@@ -36,7 +36,7 @@ int totalMotors = 4 + 2; // Evaluates to 6
 
 Compare two values and evaluate to a `boolean` (`true` or `false`).
 
-```
+```java
 boolean isFast = velocity > 5.0; // Evaluates to true or false
 ```
 
@@ -44,7 +44,7 @@ boolean isFast = velocity > 5.0; // Evaluates to true or false
 
 Combine boolean values using logical operators (`&&`, `||`, `!`).
 
-```
+```java
 boolean canShoot = hasNote && isAligned; // Evaluates to true or false
 ```
 
@@ -62,7 +62,7 @@ When Java evaluates an expression made up of multiple operators, it doesn't just
 left to right. Instead, it follows a strict set of precedence rules, similar to the
 order of operations you learned in math class (PEMDAS). For example:
 
-```
+```java
 int result = 2 + 3 * 4; // Evaluates to 14, not 20
 ```
 
@@ -74,7 +74,7 @@ giving `12`, and then `2` is added to get `14`.
 Just like in math, parentheses can be used to override the default precedence and
 force part of an expression to be evaluated first.
 
-```
+```java
 int result = (2 + 3) * 4; // Evaluates to 20
 ```
 
@@ -86,7 +86,7 @@ strictly necessary. This makes code easier for other people (and future you) to 
 Expressions can be nested inside one another, since each expression simply evaluates
 down to a value that can then be used inside a larger expression.
 
-```
+```java
 int average = (numMotors + numSensors) / 2;
 ```
 

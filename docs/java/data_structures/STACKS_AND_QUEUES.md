@@ -51,7 +51,10 @@ queues are implemented using the `Deque` interface (pronounced "deck," short for
 "double-ended queue") and its `ArrayDeque` implementation, which supports adding and
 removing from both ends efficiently.
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -67,6 +70,7 @@ commandQueue.push(1);
 commandQueue.push(2);
 System.out.println(commandQueue.pop()); // Prints 2
 ```
+</details>
 
 Since `Deque` supports operations on both ends, the same object can be used as either
 a stack or a queue, depending on which methods you call.

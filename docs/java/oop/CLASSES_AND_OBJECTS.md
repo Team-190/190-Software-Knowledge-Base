@@ -26,14 +26,14 @@ shape.
 
 ### Class Formula
 
-```
+```java
 class [ClassName] {
     [fields]
     [methods]
 }
 ```
 
-```
+```java
 class Flywheel {
     double voltage;
 
@@ -57,7 +57,7 @@ one object's data doesn't affect any other object made from the same class.
 Objects are created using the `new` keyword, which tells Java to allocate memory for a
 new instance of a class.
 
-```
+```java
 Flywheel shooterWheel = new Flywheel();
 shooterWheel.voltage = 12.0;
 shooterWheel.spin();
@@ -70,7 +70,7 @@ Spinning at 12.0 volts
 
 You can create as many independent objects from the same class as you want:
 
-```
+```java
 Flywheel shooterWheel = new Flywheel();
 Flywheel intakeWheel = new Flywheel();
 
@@ -96,7 +96,7 @@ Remember from the Variables section that `String` is a reference type, since it'
 technically an object of the `String` class? This is true for nearly everything in
 Java that isn't a primitive data type. When you write:
 
-```
+```java
 String frcYear = "2026";
 ```
 

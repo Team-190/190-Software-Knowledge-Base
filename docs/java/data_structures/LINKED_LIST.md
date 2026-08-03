@@ -22,7 +22,7 @@ and implements the same `List` interface. This means it supports all the same co
 methods, `add()`, `get()`, `remove()`, `size()`, and so on, with the same generic
 syntax used by `ArrayList`.
 
-```
+```java
 import java.util.LinkedList;
 
 LinkedList<Integer> autonWaypoints = new LinkedList<Integer>();

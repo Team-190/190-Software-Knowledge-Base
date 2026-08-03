@@ -10,13 +10,13 @@ small, known set of values, such as the state of a robot mechanism.
 
 ### Enum Formula
 
-```
+```java
 enum [EnumName] {
     [CONSTANT_ONE], [CONSTANT_TWO], [CONSTANT_THREE]
 }
 ```
 
-```
+```java
 enum ElevatorState {
     STOWED, INTAKING, SCORING
 }
@@ -25,7 +25,7 @@ enum ElevatorState {
 An enum is created much like any other class, and its constants are accessed using
 the enum name followed by the constant.
 
-```
+```java
 ElevatorState currentState = ElevatorState.STOWED;
 ```
 
@@ -39,7 +39,10 @@ Enums pair especially well with switch statements, since the compiler already kn
 every possible value the variable could hold. For more information about switch
 statements, see the Switch section.
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 switch (currentState) {
     case STOWED:
         elevator.setVoltage(0);
@@ -52,6 +55,7 @@ switch (currentState) {
         break;
 }
 ```
+</details>
 
 ## Enums with Fields and Constructors
 
@@ -59,7 +63,10 @@ Enums aren't limited to just being a list of names, they can also carry their ow
 data, just like a regular class. Each constant calls the enum's constructor when it's
 declared.
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 enum ElevatorState {
     STOWED(0),
     INTAKING(-2),
@@ -76,8 +83,9 @@ enum ElevatorState {
     }
 }
 ```
+</details>
 
-```
+```java
 double voltage = ElevatorState.SCORING.getVoltage(); // Equal to 6
 ```
 

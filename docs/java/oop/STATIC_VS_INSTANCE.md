@@ -18,7 +18,7 @@ from the class gets its own separate copy of the field, and methods operate on t
 specific object's data. This is the behavior we've used throughout the Classes and
 Objects, and Constructors sections.
 
-```
+```java
 class Flywheel {
     double voltage; // An instance field
 
@@ -40,12 +40,12 @@ static field, shared by every object of that class.
 
 ### Static Formula
 
-```
+```java
 static [data type] [field name];
 static [return type] [method name]([parameters]) { }
 ```
 
-```
+```java
 class Flywheel {
     static int numFlywheels = 0; // Shared by every Flywheel object
 
@@ -55,7 +55,7 @@ class Flywheel {
 }
 ```
 
-```
+```java
 Flywheel shooterWheel = new Flywheel();
 Flywheel intakeWheel = new Flywheel();
 
@@ -80,7 +80,7 @@ both defined on the `Math` class itself. Since they don't belong to any specific
 `Math` object, no object ever needs to be created to use them; they can be accessed
 directly through the class name.
 
-```
+```java
 double area = Math.PI * radius * radius; // No Math object required
 ```
 

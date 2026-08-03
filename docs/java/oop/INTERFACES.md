@@ -18,20 +18,23 @@ its contract using the `implements` keyword.
 
 ### Interface Formula
 
-```
+```java
 interface [InterfaceName] {
     [return type] [method name]([parameters]);
 }
 ```
 
-```
+```java
 interface Controllable {
     void enable();
     void disable();
 }
 ```
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 class Flywheel implements Controllable {
     boolean isEnabled;
 
@@ -46,6 +49,7 @@ class Flywheel implements Controllable {
     }
 }
 ```
+</details>
 
 Just like an abstract method (see the Abstract Classes section), a class that
 implements an interface is required to provide an implementation for every method the
@@ -70,7 +74,10 @@ Since Java doesn't allow a class to extend more than one superclass, interfaces 
 how Java gets around the limitations of single inheritance. A class can implement as
 many interfaces as it needs to.
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 interface Loggable {
     void log();
 }
@@ -94,6 +101,7 @@ class Flywheel implements Controllable, Loggable {
     }
 }
 ```
+</details>
 
 Now, `Flywheel` guarantees both the `Controllable` contract and the `Loggable`
 contract, even though it can still only extend a single superclass.
@@ -104,7 +112,7 @@ Modern versions of Java also allow interfaces to provide a `default` implementat
 a method, which implementing classes can use as-is, or override if they need different
 behavior.
 
-```
+```java
 interface Controllable {
     void enable();
     void disable();

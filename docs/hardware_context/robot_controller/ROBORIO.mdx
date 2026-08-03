@@ -69,6 +69,9 @@ There is a script on the RoboRIO called LVRT, which calls is responsible for sta
 
 1. SSH into the RoboRIO: https://docs.wpilib.org/en/stable/docs/software/roborio-info/roborio-ssh.html#ssh
 2. Replace /etc/init.d/lvrt with the following script:
+<details>
+<summary>Show code</summary>
+
 ```
 #!/bin/sh
 APP_PATH=`nirtcfg --file /etc/natinst/share/lvrt.conf --get section=LVRT,token=RTTarget.ApplicationPath`
@@ -84,6 +87,7 @@ then
 fi
 sleep 1
 ```
+</details>
 
 ## Technical Specifications
 

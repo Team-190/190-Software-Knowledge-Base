@@ -18,11 +18,11 @@ top of the file, before anything else (even before `import` statements).
 
 ### Package Formula
 
-```
+```java
 package [package.name];
 ```
 
-```
+```java
 package frc.robot.subsystems;
 
 class Flywheel {
@@ -42,7 +42,7 @@ a class from a *different* package, it must first be imported.
 Recall from the Input/Output section that reading user input required this line at
 the top of the file:
 
-```
+```java
 import java.util.Scanner;
 ```
 
@@ -52,7 +52,7 @@ full name (`java.util.Scanner`) every single time.
 
 ### Import Formula
 
-```
+```java
 import [package.name].[ClassName];
 ```
 
@@ -61,7 +61,7 @@ import [package.name].[ClassName];
 Instead of importing classes one at a time, a wildcard (`*`) can be used to import
 every class in a package at once.
 
-```
+```java
 import java.util.*; // Imports every class in java.util, including Scanner
 ```
 

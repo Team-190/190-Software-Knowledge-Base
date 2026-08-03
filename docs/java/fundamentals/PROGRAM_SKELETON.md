@@ -8,7 +8,7 @@ Computers need programs to be organized in a predictable way so they know where 
 
 The Java program skeleton is as follows:
 
-```
+```java
 public class Main {
     public static void main(String[] args) {
         // Program code goes here

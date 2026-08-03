@@ -11,7 +11,7 @@ you jump around inside a loop's execution.
 The `break` statement immediately exits the loop it's inside, skipping any remaining
 iterations entirely.
 
-```
+```java
 for (int i = 0; i < 10; i++) {
     if (i == 5) {
         break;
@@ -37,7 +37,7 @@ Even though the loop was set up to run 10 times, it stopped as soon as `i` reach
 The `continue` statement skips the rest of the current iteration and jumps straight to
 the next one, without exiting the loop entirely.
 
-```
+```java
 for (int i = 0; i < 5; i++) {
     if (i == 2) {
         continue;
@@ -62,7 +62,7 @@ iteration only, and the loop continued on to `i = 3`.
 When loops are nested inside one another, a plain `break` or `continue` only affects
 the innermost loop. Labeling a loop lets you target an outer loop specifically.
 
-```
+```java
 outer:
 for (int i = 0; i < 3; i++) {
     for (int j = 0; j < 3; j++) {
@@ -88,7 +88,7 @@ useful to recognize when you come across them.
 An infinite loop is a loop whose condition never becomes `false`, causing it to repeat
 forever (or until the program is forcibly stopped).
 
-```
+```java
 while (true) {
     System.out.println("This never stops!");
 }

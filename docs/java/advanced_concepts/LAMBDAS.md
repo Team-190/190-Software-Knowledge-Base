@@ -18,7 +18,7 @@ Lambdas can only be used where Java expects a **functional interface**, which is
 interface that contains exactly one abstract method. For more information about
 interfaces, see the Object-Oriented Programming section.
 
-```
+```java
 @FunctionalInterface
 public interface Calculation {
     double apply(double input);
@@ -32,11 +32,11 @@ assigned to it is supposed to implement.
 
 ### Lambda Formula
 
-```
+```java
 ([parameters]) -> [expression or code block]
 ```
 
-```
+```java
 Calculation squareIt = (double x) -> x * x;
 
 double result = squareIt.apply(4); // Equal to 16.0
@@ -46,14 +46,14 @@ The lambda `(double x) -> x * x` is shorthand for writing an entire class that
 implements `Calculation` and overrides `apply`. Java is often able to infer the
 parameter's type automatically, so it can also be shortened further:
 
-```
+```java
 Calculation squareIt = x -> x * x;
 ```
 
 If the body of the lambda needs more than one line, curly braces and a `return`
 statement can be used, just like a normal method.
 
-```
+```java
 Calculation clamp = x -> {
     if (x > 1.0) {
         return 1.0;
@@ -74,7 +74,7 @@ Java's standard library provides several general-purpose functional interfaces i
 | `Consumer<T>` | `accept(T t)`           | Takes a value of type `T`, returns nothing     |
 | `Comparator<T>` | `compare(T a, T b)`  | Takes two values, returns an `int` comparison  |
 
-```
+```java
 Runnable stopMotor = () -> motor.set(0);
 stopMotor.run(); // Executes the lambda
 ```
@@ -86,7 +86,7 @@ need a small, specific action rather than an entire class. For example, a comman
 might be built by passing in a lambda that describes exactly what should happen when
 it runs, instead of writing a whole new class for it.
 
-```
+```java
 Runnable raiseElevator = () -> elevator.setVoltage(6);
 ```
 

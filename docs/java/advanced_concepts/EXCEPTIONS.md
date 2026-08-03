@@ -16,7 +16,7 @@ program.
 
 ### Try-Catch Formula
 
-```
+```java
 try {
     [risky code]
 } catch ([ExceptionType] [name]) {
@@ -24,7 +24,7 @@ try {
 }
 ```
 
-```
+```java
 try {
     int result = 10 / 0; // Throws an ArithmeticException
     System.out.println("This line never runs");
@@ -44,7 +44,7 @@ An optional `finally` block can be added after the `catch` block. Code inside
 `finally` always runs, whether or not an exception was thrown, making it useful for
 cleanup work like closing a sensor connection.
 
-```
+```java
 try {
     int result = 10 / 0;
 } catch (ArithmeticException e) {
@@ -60,7 +60,7 @@ A single `try` block can be followed by multiple `catch` blocks, allowing differ
 exception types to be handled differently. Java also allows multiple types to be
 caught in one block using `|`.
 
-```
+```java
 try {
     riskyMethod();
 } catch (ArithmeticException e) {
@@ -70,7 +70,7 @@ try {
 }
 ```
 
-```
+```java
 try {
     riskyMethod();
 } catch (ArithmeticException | NullPointerException e) {
@@ -93,7 +93,7 @@ Java splits exceptions into two categories:
 The `throw` keyword is used to manually trigger an exception when something goes
 wrong in your own code.
 
-```
+```java
 if (voltage > 12) {
     throw new IllegalArgumentException("Voltage cannot exceed 12");
 }
@@ -103,7 +103,7 @@ If a method doesn't handle a checked exception itself, it must declare that it m
 throw one using the `throws` keyword in its method signature. For more information
 about methods, see the Object-Oriented Programming section.
 
-```
+```java
 public void readSensor() throws IOException {
     // Code that might throw an IOException
 }
@@ -115,7 +115,7 @@ Just like any other class, you can create your own exception types by extending
 `Exception` (checked) or `RuntimeException` (unchecked). This is useful for giving
 teammates a more descriptive error than a generic Java exception.
 
-```
+```java
 public class SensorDisconnectedException extends RuntimeException {
     public SensorDisconnectedException(String message) {
         super(message);
@@ -123,7 +123,7 @@ public class SensorDisconnectedException extends RuntimeException {
 }
 ```
 
-```
+```java
 if (!sensor.isConnected()) {
     throw new SensorDisconnectedException("Encoder disconnected on the elevator");
 }

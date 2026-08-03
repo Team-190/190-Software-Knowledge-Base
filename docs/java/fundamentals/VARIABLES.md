@@ -48,7 +48,7 @@ including:
 
 The general formula for creating any primitive variable is:
 
-```
+```java
 [data type] [variable name] = [value];
 ```
 
@@ -57,7 +57,7 @@ The general formula for creating any primitive variable is:
 The first step of creating a variable is to declare it. To do so, you must tell Java what
 data type the variable is storing, and the name of the variable.
 
-```
+```java
 int numMotors; // Reserves a memory location for an integer called numMotors
 ```
 
@@ -66,14 +66,14 @@ int numMotors; // Reserves a memory location for an integer called numMotors
 Then, once the variable is declared, it can be initialized. To initialize a variable, simply
 set it equal to its value.
 
-```
+```java
 numMotors = 4; // Sets the numMotors variable to the integer value of 4
 ```
 
 A shortcut approach to creating a variable is to declare and initialize the variable 
 on the same line, like so:
 
-```
+```java
 int numMotors = 4; // Declares and initializes the numMotors variable
 ```
 
@@ -86,7 +86,7 @@ with quotes.
 Strings, while they are an object, can be declared
 and initialized the same way as a primitive variable.
 
-```
+```java
 String frcYear = "2026"; // Declaring a String with name frcYear and string literal of 2026
 ```
 <img
@@ -104,7 +104,7 @@ For more information about objects, such as Strings, check out the Object-Orient
 
 When assigning a variable's value to a primitive variable, the value is copied.
 
-```
+```java
 int i = 1;
 int j = i; // The variable j would be equal to i, which is 1
 
@@ -120,7 +120,7 @@ Output:
 
 However, for a reference variable, the handle is copied, meaning that the reference type
 object isn't copied. Therefore, the object is "shared" between the two reference variables.
-```
+```java
 String greeting = "hi";
 String greeting2 = greeting;
 
@@ -147,7 +147,10 @@ When comparing values with the `==` operator, it's important to note that if you
 comparing primitive variables, their values will be compared, while if you are comparing
 reference variables, their addresses are compared. 
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 int i = 1;
 int j = 1;
 
@@ -164,6 +167,7 @@ if (greeting == greeting2)
 else
   System.out.println("the greetings are not equal);
 ```
+</details>
 
 Output:
 ```text
@@ -198,7 +202,7 @@ Java syntax requires strict adherence to rules, and FRC 190 has some standard st
 - Names cannot have spaces
 - Floating point literals default to `double`. To differentiate a float from a double, you must add an `f` suffix, and to differentiate
   a long from an integer, add an `L` suffix (java automatically handles this, however)
-  - ```float velocityMetersPerSecond = 0.5f; ```
+  - ```float velocityMetersPerSecond = 0.5f; ```java
   - ```long bigNumber = 4500000000L;```
 
 ### Conventions

@@ -28,7 +28,7 @@ Constants in java are created by using the `final` keyword.
 
 The general formula for creating a constant is:
 
-```
+```java
 final [data type] [constant name] = [value];
 ```
 

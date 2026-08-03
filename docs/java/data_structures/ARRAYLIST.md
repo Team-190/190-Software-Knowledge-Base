@@ -15,7 +15,7 @@ alt="growing-slime"
 An `ArrayList` is a resizable array, provided by Java as part of the `java.util`
 package. It automatically grows and shrinks as elements are added and removed.
 
-```
+```java
 import java.util.ArrayList;
 ```
 
@@ -28,11 +28,11 @@ section.
 
 The general formula for creating an `ArrayList` is:
 
-```
+```java
 ArrayList<[wrapper type]> [list name] = new ArrayList<[wrapper type]>();
 ```
 
-```
+```java
 ArrayList<Integer> scoredPieces = new ArrayList<Integer>();
 ```
 
@@ -66,7 +66,10 @@ allowed to hold.
 | `size()`           | Returns the number of elements in the list         |
 | `contains(value)`  | Returns `true` if the list contains the value      |
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 ArrayList<Integer> scoredPieces = new ArrayList<Integer>();
 
 scoredPieces.add(1);
@@ -80,6 +83,7 @@ scoredPieces.remove(0);
 
 System.out.println(scoredPieces.size()); // Prints 2
 ```
+</details>
 
 Unlike arrays, trying to `get()` or `set()` an index that's out of bounds still throws
 an exception, `ArrayList` just prevents that boundary from being fixed in place.
