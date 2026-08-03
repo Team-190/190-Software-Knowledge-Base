@@ -18,7 +18,7 @@ alt="water-stream"
 A stream is created by calling `.stream()` on a collection. Creating a stream doesn't
 modify the original collection; it just opens a pipeline for processing its elements.
 
-```
+```java
 ArrayList<Integer> canIds = new ArrayList<Integer>();
 canIds.add(3);
 canIds.add(7);
@@ -37,7 +37,7 @@ together. They aren't actually executed until a terminal operation is called.
 Keeps only the elements that match a given condition, provided as a lambda. For more
 information about lambda expressions, see the Lambda Expressions section.
 
-```
+```java
 canIds.stream()
       .filter(id -> id > 5); // Keeps only 7 and 12
 ```
@@ -47,7 +47,7 @@ canIds.stream()
 Transforms each element into something else, such as converting a list of CAN IDs
 into a list of their corresponding motor names.
 
-```
+```java
 canIds.stream()
       .map(id -> "Motor " + id); // Transforms each int into a String
 ```
@@ -63,7 +63,7 @@ collection, or a side effect.
 | `count()`         | Returns the number of elements                     |
 | `collect()`       | Gathers the results back into a collection          |
 
-```
+```java
 canIds.stream()
       .filter(id -> id > 5)
       .forEach(id -> System.out.println(id));
@@ -80,7 +80,7 @@ Output:
 The real value of streams comes from chaining multiple operations into a single
 readable pipeline, instead of nesting loops and if-statements.
 
-```
+```java
 ArrayList<Integer> highCanIds = canIds.stream()
       .filter(id -> id > 5)
       .collect(Collectors.toList());

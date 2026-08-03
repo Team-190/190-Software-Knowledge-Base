@@ -19,13 +19,16 @@ automatically gains all the non-private fields and methods of its superclass.
 
 ### Inheritance Formula
 
-```
+```java
 class [Subclass] extends [Superclass] {
     [additional fields and methods]
 }
 ```
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 class Subsystem {
     boolean isEnabled;
 
@@ -42,8 +45,9 @@ class Flywheel extends Subsystem {
     }
 }
 ```
+</details>
 
-```
+```java
 Flywheel shooterWheel = new Flywheel();
 shooterWheel.enable(); // Inherited from Subsystem
 shooterWheel.voltage = 12.0;
@@ -66,7 +70,10 @@ available on every `Flywheel` object, since `Flywheel` inherits them from `Subsy
 The `super` keyword refers to the superclass, and is most commonly used to call the
 superclass's constructor from within a subclass's constructor.
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 class Subsystem {
     boolean isEnabled;
 
@@ -84,6 +91,7 @@ class Flywheel extends Subsystem {
     }
 }
 ```
+</details>
 
 Just like `this(...)`, a call to `super(...)` must be the very first line of a
 constructor. `super` can also be used outside of constructors, to call a method defined
@@ -99,7 +107,10 @@ These two terms sound similar, but describe very different things:
 - **Overloading** (see the Constructors section): A class defines multiple methods
   with the same name, but different parameters.
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 class Subsystem {
     void periodic() {
         System.out.println("Generic subsystem update");
@@ -113,8 +124,9 @@ class Flywheel extends Subsystem {
     }
 }
 ```
+</details>
 
-```
+```java
 Flywheel shooterWheel = new Flywheel();
 shooterWheel.periodic();
 ```

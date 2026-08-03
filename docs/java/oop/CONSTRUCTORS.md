@@ -25,7 +25,7 @@ and you take full control over how an object is initialized.
 
 ### Constructor Formula
 
-```
+```java
 class [ClassName] {
     [ClassName]([parameters]) {
         [initialization code]
@@ -36,7 +36,7 @@ class [ClassName] {
 A constructor looks like a method, but it has no return type (not even `void`), and
 its name must exactly match the name of the class.
 
-```
+```java
 class Flywheel {
     double voltage;
 
@@ -49,7 +49,7 @@ class Flywheel {
 Now, instead of creating a `Flywheel` and setting its voltage separately, both steps
 happen at once:
 
-```
+```java
 Flywheel shooterWheel = new Flywheel(12.0);
 System.out.println(shooterWheel.voltage);
 ```
@@ -66,7 +66,7 @@ avoid a naming conflict with the `voltage` field. Java also provides the `this`
 keyword, which refers to the current object, and can be used to disambiguate a field
 from a parameter that share the same name.
 
-```
+```java
 class Flywheel {
     double voltage;
 
@@ -85,7 +85,10 @@ A class can define multiple constructors, as long as they each accept a differen
 of parameters. This is known as **overloading**, and it allows a class to be
 constructed in more than one way.
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 class Flywheel {
     double voltage;
 
@@ -98,8 +101,9 @@ class Flywheel {
     }
 }
 ```
+</details>
 
-```
+```java
 Flywheel defaultWheel = new Flywheel();
 Flywheel customWheel = new Flywheel(12.0);
 

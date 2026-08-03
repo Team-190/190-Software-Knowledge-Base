@@ -22,7 +22,7 @@ Before generics existed, collections like `ArrayList` stored everything as a gen
 `Object`, meaning you had to manually cast values back to their real type every time
 you retrieved them.
 
-```
+```java
 ArrayList list = new ArrayList(); // Raw type, no generics
 list.add("hello");
 
@@ -33,7 +33,7 @@ This was risky, since nothing stopped you from accidentally adding the wrong typ
 data into the list, which would only fail at runtime when the cast happened. Generics
 solve this by letting the compiler check types ahead of time.
 
-```
+```java
 ArrayList<String> list = new ArrayList<String>();
 list.add("hello");
 
@@ -47,13 +47,16 @@ single uppercase letter such as `T` (type), `E` (element), or `K`/`V` (key/value
 
 ### Generic Class Formula
 
-```
+```java
 public class [ClassName]<T> {
     [fields and methods using T]
 }
 ```
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 public class Pair<T> {
     private T first;
     private T second;
@@ -68,8 +71,9 @@ public class Pair<T> {
     }
 }
 ```
+</details>
 
-```
+```java
 Pair<Integer> canIds = new Pair<Integer>(3, 7);
 int firstCanId = canIds.getFirst(); // Equal to 3
 ```
@@ -82,13 +86,13 @@ For more information about classes, see the Object-Oriented Programming section.
 Individual methods can also be generic, even inside a non-generic class. The type
 parameter is declared right before the return type.
 
-```
+```java
 public static <T> T getLast(ArrayList<T> list) {
     return list.get(list.size() - 1);
 }
 ```
 
-```
+```java
 ArrayList<String> names = new ArrayList<String>();
 names.add("Gompei");
 
@@ -101,7 +105,7 @@ Sometimes you want to restrict a generic type to only accept certain kinds of ty
 such as only numbers. This is done using the `extends` keyword, even when the bound
 is an interface.
 
-```
+```java
 public static double sum(ArrayList<? extends Number> numbers) {
     double total = 0;
     for (Number n : numbers) {

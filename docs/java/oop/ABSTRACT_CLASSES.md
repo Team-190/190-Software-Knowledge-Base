@@ -18,14 +18,14 @@ An abstract class is declared using the `abstract` keyword.
 
 ### Abstract Class Formula
 
-```
+```java
 abstract class [ClassName] {
     [regular fields and methods]
     abstract [return type] [method name]([parameters]);
 }
 ```
 
-```
+```java
 abstract class Subsystem {
     boolean isEnabled;
 
@@ -43,7 +43,7 @@ implement, leaving that responsibility to its subclasses.
 
 ## Why You Can't Instantiate an Abstract Class
 
-```
+```java
 Subsystem subsystem = new Subsystem(); // Compiler error!
 ```
 
@@ -53,7 +53,7 @@ you called `subsystem.periodic()`, there would be no code to actually run. Inste
 concrete (non-abstract) subclass is required to provide an implementation for every
 abstract method it inherits.
 
-```
+```java
 class Flywheel extends Subsystem {
     double voltage;
 
@@ -64,7 +64,7 @@ class Flywheel extends Subsystem {
 }
 ```
 
-```
+```java
 Subsystem shooterWheel = new Flywheel(); // This works, since Flywheel implements periodic()
 shooterWheel.periodic();
 ```

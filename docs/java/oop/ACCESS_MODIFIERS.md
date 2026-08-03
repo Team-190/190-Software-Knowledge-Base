@@ -32,7 +32,7 @@ It might seem easier to just make every field `public` so any code can read or c
 it directly. However, this makes it very easy for other code to put an object into an
 invalid state. For example, imagine a `Flywheel` class with a public `voltage` field:
 
-```
+```java
 flywheel.voltage = 9999.0; // Nothing is stopping this from happening!
 ```
 
@@ -47,7 +47,10 @@ Since private fields can't be accessed directly from outside their class, classe
 typically expose public methods, called **getters** and **setters**, to read and
 modify them safely.
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 class Flywheel {
     private double voltage;
 
@@ -62,8 +65,9 @@ class Flywheel {
     }
 }
 ```
+</details>
 
-```
+```java
 Flywheel shooterWheel = new Flywheel();
 shooterWheel.setVoltage(9999.0); // Ignored, since it fails the check
 shooterWheel.setVoltage(12.0);

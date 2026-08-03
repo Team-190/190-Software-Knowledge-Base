@@ -18,7 +18,7 @@ the Control Flow section, but now that you have real collections to work with, i
 worth revisiting. It automatically walks through every element of an array or
 collection, without needing to manually track an index.
 
-```
+```java
 ArrayList<Integer> scoredPieces = new ArrayList<Integer>();
 scoredPieces.add(1);
 scoredPieces.add(2);
@@ -38,7 +38,10 @@ The enhanced for-loop is convenient, but it has one major limitation: you can't
 safely add or remove elements from a collection while iterating over it with a
 for-each loop. Doing so throws a `ConcurrentModificationException`.
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 ArrayList<Integer> scoredPieces = new ArrayList<Integer>();
 scoredPieces.add(1);
 scoredPieces.add(2);
@@ -50,17 +53,21 @@ for (int piece : scoredPieces) {
   }
 }
 ```
+</details>
 
 To safely remove elements while iterating, Java provides the `Iterator` interface,
 which gives you direct, manual control over the traversal.
 
 ### Iterator Formula
 
-```
+```java
 Iterator<[type]> [iterator name] = [collection name].iterator();
 ```
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 import java.util.Iterator;
 
 ArrayList<Integer> scoredPieces = new ArrayList<Integer>();
@@ -77,6 +84,7 @@ while (iterator.hasNext()) {
   }
 }
 ```
+</details>
 
 | Method       | Description                                         |
 |--------------|--------------------------------------------------------|

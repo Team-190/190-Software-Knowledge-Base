@@ -18,7 +18,7 @@ the console.
 | `System.out.print()`   | Prints text with no line break afterward   |
 | `System.out.println()` | Prints text followed by a line break       |
 
-```
+```java
 System.out.print("Motor Voltage: ");
 System.out.println(6.5);
 ```
@@ -31,7 +31,7 @@ Motor Voltage: 6.5
 Multiple values can be combined into a single output statement using the `+` operator,
 which concatenates (joins together) values into a `String`.
 
-```
+```java
 int numMotors = 4;
 System.out.println("Number of motors: " + numMotors);
 ```
@@ -62,7 +62,7 @@ alt="barcode-scanner"
 Since `Scanner` isn't part of the basic Java language, it must be imported at the top
 of the file, above the class declaration.
 
-```
+```java
 import java.util.Scanner;
 ```
 
@@ -74,7 +74,7 @@ section.
 Once imported, a `Scanner` object can be created to read from `System.in`, which
 represents input typed into the console.
 
-```
+```java
 Scanner scanner = new Scanner(System.in);
 ```
 
@@ -99,7 +99,7 @@ depending on the method called.
 | `next()`          | Reads the next word (`String`)       |
 | `nextLine()`      | Reads an entire line (`String`)      |
 
-```
+```java
 Scanner scanner = new Scanner(System.in);
 
 System.out.print("Enter the number of motors: ");
@@ -116,7 +116,7 @@ newline character in the input behind. If `nextLine()` is called immediately aft
 it reads that leftover newline instead of waiting for new input, which can seem like
 it was skipped entirely.
 
-```
+```java
 Scanner scanner = new Scanner(System.in);
 
 System.out.print("Enter your age: ");

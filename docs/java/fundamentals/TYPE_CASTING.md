@@ -21,7 +21,7 @@ larger one, since no data is lost in the process.
 byte -> short -> int -> long -> float -> double
 ```
 
-```
+```java
 int numMotors = 4;
 double numMotorsAsDouble = numMotors; // Automatically widened to a double
 ```
@@ -44,11 +44,11 @@ alt="square-peg-round-hole"
 
 The general formula for explicitly casting a value is:
 
-```
+```java
 ([data type]) [value]
 ```
 
-```
+```java
 double velocity = 5.75;
 int velocityAsInt = (int) velocity; // Explicitly narrowed to an int, equal to 5
 ```
@@ -61,7 +61,7 @@ truncates (cuts off) the decimal portion.
 Narrowing casting can also cause **overflow** if the value doesn't fit within the
 range of the smaller data type. For example:
 
-```
+```java
 int bigNumber = 130;
 byte smallNumber = (byte) bigNumber; // Overflows, equal to -126
 ```
@@ -74,7 +74,7 @@ causes it to wrap around past the maximum value and come out the other side.
 The `char` data type is stored internally as a number (its Unicode code point), so it
 can be cast to and from numeric types as well.
 
-```
+```java
 char letter = 'A';
 int letterAsInt = letter; // Widened to an int, equal to 65
 

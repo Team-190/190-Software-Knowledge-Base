@@ -20,7 +20,10 @@ be treated as though it were an object of the superclass type. This is called
 **upcasting**, and it happens automatically, similar to widening casting covered in
 the Type Casting section.
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 class Subsystem {
     void periodic() {
         System.out.println("Generic subsystem update");
@@ -34,8 +37,9 @@ class Flywheel extends Subsystem {
     }
 }
 ```
+</details>
 
-```
+```java
 Subsystem subsystem = new Flywheel(); // A Flywheel, stored as a Subsystem reference
 subsystem.periodic();
 ```
@@ -59,7 +63,7 @@ This is what makes polymorphism useful. A single list of `Subsystem` references 
 hold many different kinds of subsystems, and calling `periodic()` on each one will
 automatically run the correct, subsystem-specific behavior.
 
-```
+```java
 class Intake extends Subsystem {
     @Override
     void periodic() {
@@ -68,7 +72,7 @@ class Intake extends Subsystem {
 }
 ```
 
-```
+```java
 Subsystem[] subsystems = { new Flywheel(), new Intake() };
 
 for (Subsystem subsystem : subsystems) {

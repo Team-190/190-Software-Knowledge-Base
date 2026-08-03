@@ -18,13 +18,13 @@ its condition is `true`.
 
 ### If Formula
 
-```
+```java
 if ([condition]) {
     [code to run if condition is true]
 }
 ```
 
-```
+```java
 if (velocity > 5.0) {
     System.out.println("Moving fast!");
 }
@@ -37,7 +37,7 @@ skipped entirely, and the program moves on to whatever comes after it.
 
 An `else` block runs when the `if` condition is `false`, giving you a fallback path.
 
-```
+```java
 if (velocity > 5.0) {
     System.out.println("Moving fast!");
 } else {
@@ -50,7 +50,7 @@ if (velocity > 5.0) {
 When there are more than two possible outcomes, `else if` can be chained onto an `if`
 statement to check additional conditions in order.
 
-```
+```java
 if (velocity > 10.0) {
     System.out.println("Very fast!");
 } else if (velocity > 5.0) {
@@ -70,7 +70,7 @@ The condition inside the parentheses of an `if` statement must always evaluate t
 `boolean`. This means anything covered in the Expressions and Operators sections, such
 as relational and logical expressions, can be used here.
 
-```
+```java
 boolean hasNote = true;
 boolean isAligned = true;
 
@@ -87,7 +87,7 @@ Operators sections.
 Conditionals can be placed inside other conditionals, allowing a program to check a
 second condition only after the first one has already been satisfied.
 
-```
+```java
 if (hasNote) {
     if (isAligned) {
         System.out.println("Ready to shoot!");
@@ -108,7 +108,7 @@ alternative when possible.
 Technically, Java allows you to omit curly braces `{}` around a single-line `if` body.
 However, **FRC 190 always uses braces**, even for one-line blocks:
 
-```
+```java
 // Avoid
 if (velocity > 5.0)
     System.out.println("Moving fast!");

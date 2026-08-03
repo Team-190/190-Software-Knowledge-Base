@@ -27,14 +27,14 @@ Arithmetic operators perform math operations on numeric values.
 Note that dividing two integers performs **integer division**, meaning the decimal
 portion of the result is truncated:
 
-```
+```java
 int result = 7 / 2; // Evaluates to 3, not 3.5
 ```
 
 The modulus operator `%` returns the remainder of a division, and is very useful for
 things like checking whether a number is even or odd:
 
-```
+```java
 int remainder = 7 % 2; // Evaluates to 1
 ```
 
@@ -84,7 +84,7 @@ arithmetic operation with an assignment.
 | `/=`     | `a = a / b`    |
 | `%=`     | `a = a % b`    |
 
-```
+```java
 int numMotors = 4;
 numMotors += 2; // numMotors is now equal to 6
 ```
@@ -104,7 +104,7 @@ The increment and decrement operators can be used in two ways: **prefix** (`++i`
 **postfix** (`i++`). Both increment the variable, but they differ in the value the
 expression evaluates to.
 
-```
+```java
 int i = 1;
 int j = ++i; // i is incremented first, then assigned: i = 2, j = 2
 
@@ -119,11 +119,11 @@ only operator in Java that takes three operands.
 
 ### Ternary Formula
 
-```
+```java
 [condition] ? [value if true] : [value if false]
 ```
 
-```
+```java
 int voltage = isFast ? 12 : 6;
 ```
 

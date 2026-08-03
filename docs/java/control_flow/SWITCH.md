@@ -13,7 +13,10 @@ alt="switch-case"
 
 ## Switch Formula
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 switch ([variable]) {
     case [value1]:
         [code to run]
@@ -25,8 +28,12 @@ switch ([variable]) {
         [code to run if no case matches]
 }
 ```
+</details>
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 int allianceStation = 2;
 
 switch (allianceStation) {
@@ -43,6 +50,7 @@ switch (allianceStation) {
         System.out.println("Invalid station");
 }
 ```
+</details>
 
 Output:
 ```text
@@ -54,7 +62,7 @@ Station 2
 The switch statement above is functionally equivalent to the following `else if`
 chain, but is arguably easier to read when there are many possible values to check:
 
-```
+```java
 if (allianceStation == 1) {
     System.out.println("Station 1");
 } else if (allianceStation == 2) {
@@ -73,7 +81,10 @@ Each `case` in a switch statement needs a `break` statement to stop execution fr
 downward through every subsequent case until it hits a `break` or reaches the end of
 the switch block.
 
-```
+<details>
+<summary>Show code</summary>
+
+```java
 int allianceStation = 1;
 
 switch (allianceStation) {
@@ -86,6 +97,7 @@ switch (allianceStation) {
         System.out.println("Invalid station");
 }
 ```
+</details>
 
 Output:
 ```text
@@ -110,7 +122,7 @@ Newer versions of Java support a more concise "arrow" syntax for switch statemen
 which doesn't require `break` statements, since each case only runs its own code by
 default (no fall-through).
 
-```
+```java
 switch (allianceStation) {
     case 1 -> System.out.println("Station 1");
     case 2 -> System.out.println("Station 2");

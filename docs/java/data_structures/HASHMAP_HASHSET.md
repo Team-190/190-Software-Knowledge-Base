@@ -19,11 +19,11 @@ position, you look it up by its key, similar to looking up a word in a dictionar
 
 ### HashMap Formula
 
-```
+```java
 HashMap<[key type], [value type]> [map name] = new HashMap<[key type], [value type]>();
 ```
 
-```
+```java
 import java.util.HashMap;
 
 HashMap<String, Integer> subsystemCANIDs = new HashMap<String, Integer>();
@@ -50,7 +50,7 @@ A `HashSet` is similar to a `HashMap`, but it only stores values, no keys, and e
 value is guaranteed to be unique. It's useful whenever you need to keep track of a
 collection of items and quickly check whether something has already been seen.
 
-```
+```java
 import java.util.HashSet;
 
 HashSet<Integer> scoutedTeamNumbers = new HashSet<Integer>();

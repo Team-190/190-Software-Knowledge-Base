@@ -18,13 +18,13 @@ block of code, such as iterating a fixed number of times.
 
 ### For Loop Formula
 
-```
+```java
 for ([initialization]; [condition]; [update]) {
     [code to run each iteration]
 }
 ```
 
-```
+```java
 for (int i = 0; i < 5; i++) {
     System.out.println("Motor check " + i);
 }
@@ -43,13 +43,13 @@ repeat, and instead want to keep looping as long as some condition remains `true
 
 ### While Loop Formula
 
-```
+```java
 while ([condition]) {
     [code to run each iteration]
 }
 ```
 
-```
+```java
 int velocity = 0;
 
 while (velocity < 10) {
@@ -68,13 +68,13 @@ A `do-while` loop is similar to a `while` loop, except the condition is checked
 
 ### Do-While Loop Formula
 
-```
+```java
 do {
     [code to run each iteration]
 } while ([condition]);
 ```
 
-```
+```java
 int attempts = 0;
 
 do {
@@ -97,7 +97,7 @@ Java also provides a special version of the `for` loop, called the enhanced for 
 (or "for-each" loop), which is used to iterate over every element in a collection,
 such as an array or `ArrayList`, without needing to manually track an index.
 
-```
+```java
 for (int motorId : motorIds) {
     System.out.println("Motor ID: " + motorId);
 }
