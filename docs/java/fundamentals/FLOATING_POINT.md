@@ -121,7 +121,7 @@ instead of exactly `0.3`.
 
 <img
 src={useBaseUrl("img/images/javafundamentals/floatingpointerror.webp")}
-alt="chrisevans"
+alt="floatingpointerror"
 />
 
 ### Precision vs Range
@@ -142,5 +142,5 @@ This tradeoff is acceptable for many applications such as:
 
 <img
 src={useBaseUrl("img/images/javafundamentals/friendsmeme.webp")}
-alt="friends"
+alt="friendsmeme"
 />

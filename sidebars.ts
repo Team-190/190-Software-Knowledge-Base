@@ -65,7 +65,12 @@ const sidebars: SidebarsConfig = {
             id: 'java/CONTROL_FLOW',
           },
           collapsed: true,
-          items: [],
+          items: [
+              'java/control_flow/CONDITIONALS',
+              'java/control_flow/SWITCH',
+              'java/control_flow/LOOPS',
+              'java/control_flow/LOOP_CONTROL'
+          ],
         },
         {
           type: 'category',
@@ -75,7 +80,17 @@ const sidebars: SidebarsConfig = {
             id: 'java/OOP',
           },
           collapsed: true,
-          items: [],
+          items: [
+              'java/oop/CLASSES_AND_OBJECTS',
+              'java/oop/CONSTRUCTORS',
+              'java/oop/ACCESS_MODIFIERS',
+              'java/oop/STATIC_VS_INSTANCE',
+              'java/oop/INHERITANCE',
+              'java/oop/POLYMORPHISM',
+              'java/oop/ABSTRACT_CLASSES',
+              'java/oop/INTERFACES',
+              'java/oop/PACKAGES_AND_IMPORTS'
+          ],
         },
         {
           type: 'category',
@@ -85,7 +100,14 @@ const sidebars: SidebarsConfig = {
             id: 'java/DATA_STRUCTURES',
           },
           collapsed: true,
-          items: [],
+          items: [
+              'java/data_structures/ARRAYS',
+              'java/data_structures/ARRAYLIST',
+              'java/data_structures/LINKED_LIST',
+              'java/data_structures/STACKS_AND_QUEUES',
+              'java/data_structures/HASHMAP_HASHSET',
+              'java/data_structures/ITERATION'
+          ],
         },
         {
           type: 'category',
@@ -95,7 +117,13 @@ const sidebars: SidebarsConfig = {
             id: 'java/ADVANCED_CONCEPTS',
           },
           collapsed: true,
-          items: [],
+          items: [
+              'java/advanced_concepts/EXCEPTIONS',
+              'java/advanced_concepts/GENERICS',
+              'java/advanced_concepts/LAMBDAS',
+              'java/advanced_concepts/STREAMS',
+              'java/advanced_concepts/ENUMS'
+          ],
         },
       ],
     },
