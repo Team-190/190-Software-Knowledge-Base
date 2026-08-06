@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 480" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="618" height="478" rx="14" fill="#ffffff" stroke="#d0d5dd" stroke-width="1.5"/>
+  <text x="310" y="34" fill="#1d3557" font-size="20" font-weight="700" text-anchor="middle">BLDC Motor</text>
+
+  <!-- stator housing ring -->
+  <circle cx="240" cy="260" r="195" fill="#eef0f2" stroke="#adb5bd" stroke-width="1.5"/>
+  <circle cx="240" cy="260" r="150" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+
+  <!-- 8 stator coils -->
+  <g>
+    <g transform="translate(240,260) rotate(0) translate(0,-175)">
+      <ellipse cx="0" cy="0" rx="22" ry="30" fill="#c17a3d" stroke="#7a4a1f" stroke-width="1.5"/>
+      <line x1="-20" y1="-15" x2="20" y2="-15" stroke="#7a4a1f" stroke-width="2"/>
+      <line x1="-22" y1="0" x2="22" y2="0" stroke="#7a4a1f" stroke-width="2"/>
+      <line x1="-20" y1="15" x2="20" y2="15" stroke="#7a4a1f" stroke-width="2"/>
+    </g>
+    <g transform="translate(240,260) rotate(45) translate(0,-175)">
+      <ellipse cx="0" cy="0" rx="22" ry="30" fill="#c17a3d" stroke="#7a4a1f" stroke-width="1.5"/>
+      <line x1="-20" y1="-15" x2="20" y2="-15" stroke="#7a4a1f" stroke-width="2"/>
+      <line x1="-22" y1="0" x2="22" y2="0" stroke="#7a4a1f" stroke-width="2"/>
+      <line x1="-20" y1="15" x2="20" y2="15" stroke="#7a4a1f" stroke-width="2"/>
+    </g>
+    <g transform="translate(240,260) rotate(90) translate(0,-175)">
+      <ellipse cx="0" cy="0" rx="22" ry="30" fill="#c17a3d" stroke="#7a4a1f" stroke-width="1.5"/>
+      <line x1="-20" y1="-15" x2="20" y2="-15" stroke="#7a4a1f" stroke-width="2"/>
+      <line x1="-22" y1="0" x2="22" y2="0" stroke="#7a4a1f" stroke-width="2"/>
+      <line x1="-20" y1="15" x2="20" y2="15" stroke="#7a4a1f" stroke-width="2"/>
+    </g>
+    <g transform="translate(240,260) rotate(135) translate(0,-175)">
+      <ellipse cx="0" cy="0" rx="22" ry="30" fill="#c17a3d" stroke="#7a4a1f" stroke-width="1.5"/>
+      <line x1="-20" y1="-15" x2="20" y2="-15" stroke="#7a4a1f" stroke-width="2"/>
+      <line x1="-22" y1="0" x2="22" y2="0" stroke="#7a4a1f" stroke-width="2"/>
+      <line x1="-20" y1="15" x2="20" y2="15" stroke="#7a4a1f" stroke-width="2"/>
+    </g>
+    <g transform="translate(240,260) rotate(180) translate(0,-175)">
+      <ellipse cx="0" cy="0" rx="22" ry="30" fill="#c17a3d" stroke="#7a4a1f" stroke-width="1.5"/>
+      <line x1="-20" y1="-15" x2="20" y2="-15" stroke="#7a4a1f" stroke-width="2"/>
+      <line x1="-22" y1="0" x2="22" y2="0" stroke="#7a4a1f" stroke-width="2"/>
+      <line x1="-20" y1="15" x2="20" y2="15" stroke="#7a4a1f" stroke-width="2"/>
+    </g>
+    <g transform="translate(240,260) rotate(225) translate(0,-175)">
+      <ellipse cx="0" cy="0" rx="22" ry="30" fill="#c17a3d" stroke="#7a4a1f" stroke-width="1.5"/>
+      <line x1="-20" y1="-15" x2="20" y2="-15" stroke="#7a4a1f" stroke-width="2"/>
+      <line x1="-22" y1="0" x2="22" y2="0" stroke="#7a4a1f" stroke-width="2"/>
+      <line x1="-20" y1="15" x2="20" y2="15" stroke="#7a4a1f" stroke-width="2"/>
+    </g>
+    <g transform="translate(240,260) rotate(270) translate(0,-175)">
+      <ellipse cx="0" cy="0" rx="22" ry="30" fill="#c17a3d" stroke="#7a4a1f" stroke-width="1.5"/>
+      <line x1="-20" y1="-15" x2="20" y2="-15" stroke="#7a4a1f" stroke-width="2"/>
+      <line x1="-22" y1="0" x2="22" y2="0" stroke="#7a4a1f" stroke-width="2"/>
+      <line x1="-20" y1="15" x2="20" y2="15" stroke="#7a4a1f" stroke-width="2"/>
+    </g>
+    <g transform="translate(240,260) rotate(315) translate(0,-175)">
+      <ellipse cx="0" cy="0" rx="22" ry="30" fill="#c17a3d" stroke="#7a4a1f" stroke-width="1.5"/>
+      <line x1="-20" y1="-15" x2="20" y2="-15" stroke="#7a4a1f" stroke-width="2"/>
+      <line x1="-22" y1="0" x2="22" y2="0" stroke="#7a4a1f" stroke-width="2"/>
+      <line x1="-20" y1="15" x2="20" y2="15" stroke="#7a4a1f" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- rotor: 4 alternating magnet pole segments -->
+  <path d="M 169.3,189.3 A 100,100 0 0,1 310.7,189.3 L 278.9,221.1 A 55,55 0 0,0 201.1,221.1 Z" fill="#457b9d"/>
+  <path d="M 310.7,189.3 A 100,100 0 0,1 310.7,330.7 L 278.9,298.9 A 55,55 0 0,0 278.9,221.1 Z" fill="#e63946"/>
+  <path d="M 310.7,330.7 A 100,100 0 0,1 169.3,330.7 L 201.1,298.9 A 55,55 0 0,0 278.9,298.9 Z" fill="#457b9d"/>
+  <path d="M 169.3,330.7 A 100,100 0 0,1 169.3,189.3 L 201.1,221.1 A 55,55 0 0,0 201.1,298.9 Z" fill="#e63946"/>
+
+  <text x="240" y="190" fill="#ffffff" font-size="22" font-weight="700" text-anchor="middle">N</text>
+  <text x="325" y="268" fill="#ffffff" font-size="22" font-weight="700" text-anchor="middle">S</text>
+  <text x="240" y="345" fill="#ffffff" font-size="22" font-weight="700" text-anchor="middle">N</text>
+  <text x="155" y="268" fill="#ffffff" font-size="22" font-weight="700" text-anchor="middle">S</text>
+
+  <!-- center hub -->
+  <circle cx="240" cy="260" r="50" fill="#e9ecef" stroke="#adb5bd" stroke-width="1.5"/>
+
+  <!-- labels with leader lines -->
+  <circle cx="310.7" cy="189.3" r="4" fill="#1d3557"/>
+  <line x1="310.7" y1="189.3" x2="430" y2="110" stroke="#1d3557" stroke-width="1.5"/>
+  <text x="440" y="100" fill="#1d3557" font-size="18" font-weight="700">Stator</text>
+  <text x="440" y="122" fill="#495057" font-size="15">Coils</text>
+
+  <circle cx="325" cy="268" r="4" fill="#1d3557"/>
+  <line x1="325" y1="268" x2="430" y2="220" stroke="#1d3557" stroke-width="1.5"/>
+  <text x="440" y="210" fill="#1d3557" font-size="18" font-weight="700">Rotor</text>
+  <text x="440" y="232" fill="#495057" font-size="15">Permanent Magnet</text>
+
+  <text x="310" y="460" fill="#555" font-size="13" text-anchor="middle" font-style="italic">the stator's coils surround a rotor whose magnet poles alternate N, S, N, S around its rim</text>
+</svg>

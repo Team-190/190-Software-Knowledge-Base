@@ -232,53 +232,87 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'category',
-          label: '🏍️ Motors',
-          link: {
-            type: 'doc',
-            id: 'controls/MOTORS',
-          },
-          collapsed: true,
-          items: [],
-        },
-        {
-          type: 'category',
-          label: '📟 Hardware Communication',
-          link: {
-            type: 'doc',
-            id: 'controls/HARDWARE_COMMUNICATION',
-          },
-          collapsed: true,
-          items: [],
-        },
-        {
-          type: 'category',
           label: '💡 Open Loop Control',
           link: {
             type: 'doc',
-            id: 'controls/OPEN_LOOP_CONTROL',
+            id: 'controls/open_loop_control/OPEN_LOOP_CONTROL',
           },
           collapsed: true,
-          items: [],
+          items: [
+            'controls/open_loop_control/PERCENT_OUTPUT',
+            'controls/open_loop_control/VOLTAGE_CONTROL',
+            'controls/open_loop_control/FEEDFORWARD',
+            'controls/open_loop_control/COMPARISON',
+          ],
         },
         {
           type: 'category',
           label: '➰ Closed Loop Control',
           link: {
             type: 'doc',
-            id: 'controls/CLOSED_LOOP_CONTROL',
+            id: 'controls/closed_loop_control/CLOSED_LOOP_CONTROL',
           },
           collapsed: true,
-          items: [],
+          items: [
+            'controls/closed_loop_control/PROPORTIONAL',
+            'controls/closed_loop_control/INTEGRAL',
+            'controls/closed_loop_control/DERIVATIVE',
+            'controls/closed_loop_control/PID_TUNING',
+            'controls/closed_loop_control/COMPARISON',
+          ],
         },
         {
           type: 'category',
           label: '🎛️ Motion Profiles',
           link: {
             type: 'doc',
-            id: 'controls/MOTION_PROFILING',
+            id: 'controls/motion_profiling/MOTION_PROFILING',
           },
           collapsed: true,
-          items: [],
+          items: [
+            'controls/motion_profiling/TRAPEZOIDAL',
+            'controls/motion_profiling/S_CURVE',
+            'controls/motion_profiling/FEEDFORWARD_WITH_PROFILES',
+            'controls/motion_profiling/COMPARISON',
+          ],
+        },
+        {
+          type: 'category',
+          label: '🏍️ Motors and Commutation',
+          link: {
+            type: 'doc',
+            id: 'controls/motors/MOTORS',
+          },
+          collapsed: true,
+          items: [
+            'controls/motors/BRUSHED_MOTORS',
+            'controls/motors/BRUSHLESS_MOTORS',
+            'controls/motors/SIX_STEP_COMMUTATION',
+            'controls/motors/SINUSOIDAL_COMMUTATION',
+            'controls/motors/FIELD_ORIENTED_CONTROL',
+            'controls/motors/MOTOR_CHARACTERISTICS',
+            'controls/motors/TORQUE_RIPPLE',
+            'controls/motors/COMPARISON',
+          ],
+        },
+        'controls/current_control/CURRENT_CONTROL',
+        {
+          type: 'category',
+          label: '📟 Hardware Communication',
+          link: {
+            type: 'doc',
+            id: 'controls/hardware_communication/HARDWARE_COMMUNICATION',
+          },
+          collapsed: true,
+          items: [
+            'controls/hardware_communication/PWM',
+            'controls/hardware_communication/UART',
+            'controls/hardware_communication/SPI',
+            'controls/hardware_communication/I2C',
+            'controls/hardware_communication/CAN_BUS',
+            'controls/hardware_communication/ETHERNET',
+            'controls/hardware_communication/COMPARISON',
+          ],
         },
       ],
     },
@@ -324,6 +358,66 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Networking',
+      link: {
+        type: 'generated-index',
+      },
+      collapsed: true,
+      items: [
+        {
+          type: 'category',
+          label: '🌐 IP Addressing & Subnets',
+          link: {
+            type: 'doc',
+            id: 'networking/IP_ADDRESSING',
+          },
+          collapsed: true,
+          items: [],
+        },
+        {
+          type: 'category',
+          label: '🚪 Ports & Transport (TCP/UDP)',
+          link: {
+            type: 'doc',
+            id: 'networking/PORTS_AND_TRANSPORT',
+          },
+          collapsed: true,
+          items: [],
+        },
+        {
+          type: 'category',
+          label: '📛 DNS & Name Resolution',
+          link: {
+            type: 'doc',
+            id: 'networking/DNS',
+          },
+          collapsed: true,
+          items: [],
+        },
+        {
+          type: 'category',
+          label: '🕸️ FRC Network Topology',
+          link: {
+            type: 'doc',
+            id: 'networking/FRC_NETWORK_TOPOLOGY',
+          },
+          collapsed: true,
+          items: [],
+        },
+        {
+          type: 'category',
+          label: '📶 NetworkTables',
+          link: {
+            type: 'doc',
+            id: 'networking/NETWORKTABLES',
+          },
+          collapsed: true,
+          items: [],
+        },
+      ],
+    },
+    {
+      type: 'category',
       label: 'Vision & Localization',
       link: {
         type: 'generated-index',
@@ -346,16 +440,6 @@ const sidebars: SidebarsConfig = {
           link: {
             type: 'doc',
             id: 'vision_localization/CAMERAS',
-          },
-          collapsed: true,
-          items: [],
-        },
-        {
-          type: 'category',
-          label: '📶 NetworkTables',
-          link: {
-            type: 'doc',
-            id: 'vision_localization/NETWORKTABLES',
           },
           collapsed: true,
           items: [],

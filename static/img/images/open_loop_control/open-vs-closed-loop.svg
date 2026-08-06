@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="698" height="418" rx="14" fill="#ffffff" stroke="#d0d5dd" stroke-width="1.5"/>
+
+  <defs>
+    <marker id="olArrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#333"/>
+    </marker>
+    <marker id="fbArrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#1b6f60"/>
+    </marker>
+  </defs>
+
+  <!-- OPEN LOOP -->
+  <text x="180" y="35" fill="#1d3557" font-size="17" font-weight="700" text-anchor="middle">Open Loop</text>
+
+  <rect x="30" y="70" width="110" height="55" rx="6" fill="#eef2ff" stroke="#457b9d" stroke-width="2"/>
+  <text x="85" y="102" fill="#1d3557" font-size="14" font-weight="600" text-anchor="middle">Command</text>
+
+  <line x1="140" y1="97.5" x2="215" y2="97.5" stroke="#333" stroke-width="2.5" marker-end="url(#olArrow)"/>
+
+  <rect x="220" y="70" width="110" height="55" rx="6" fill="#fde2e4" stroke="#e63946" stroke-width="2"/>
+  <text x="275" y="102" fill="#9d0208" font-size="14" font-weight="600" text-anchor="middle">Motor</text>
+
+  <line x1="330" y1="97.5" x2="345" y2="97.5" stroke="#333" stroke-width="2.5" marker-end="url(#olArrow)"/>
+  <text x="360" y="93" fill="#555" font-size="13">Mechanism moves...</text>
+  <text x="360" y="113" fill="#555" font-size="13" font-style="italic">somewhere. Nothing checks.</text>
+
+  <line x1="20" y1="190" x2="680" y2="190" stroke="#eef0f2" stroke-width="1.5"/>
+
+  <!-- CLOSED LOOP -->
+  <text x="180" y="225" fill="#1d3557" font-size="17" font-weight="700" text-anchor="middle">Closed Loop</text>
+
+  <circle cx="85" cy="290" r="24" fill="#fdf3d9" stroke="#e9c46a" stroke-width="2"/>
+  <text x="85" y="296" fill="#8a6d00" font-size="20" font-weight="700" text-anchor="middle">&#931;</text>
+  <text x="118" y="315" fill="#8a6d00" font-size="12">error</text>
+
+  <line x1="20" y1="290" x2="61" y2="290" stroke="#333" stroke-width="2.5" marker-end="url(#olArrow)"/>
+  <text x="18" y="275" fill="#555" font-size="12">setpoint</text>
+
+  <line x1="109" y1="290" x2="150" y2="290" stroke="#333" stroke-width="2.5" marker-end="url(#olArrow)"/>
+
+  <rect x="155" y="262.5" width="110" height="55" rx="6" fill="#eef2ff" stroke="#457b9d" stroke-width="2"/>
+  <text x="210" y="294.5" fill="#1d3557" font-size="14" font-weight="600" text-anchor="middle">Controller</text>
+
+  <line x1="265" y1="290" x2="330" y2="290" stroke="#333" stroke-width="2.5" marker-end="url(#olArrow)"/>
+
+  <rect x="335" y="262.5" width="110" height="55" rx="6" fill="#fde2e4" stroke="#e63946" stroke-width="2"/>
+  <text x="390" y="294.5" fill="#9d0208" font-size="14" font-weight="600" text-anchor="middle">Motor</text>
+
+  <line x1="445" y1="290" x2="560" y2="290" stroke="#333" stroke-width="2.5" marker-end="url(#olArrow)"/>
+  <text x="565" y="295" fill="#555" font-size="13">Mechanism moves</text>
+
+  <!-- sensor observes the mechanism -->
+  <line x1="500" y1="290" x2="500" y2="345" stroke="#333" stroke-width="2" stroke-dasharray="0"/>
+  <rect x="335" y="345" width="165" height="45" rx="6" fill="#e6f4f1" stroke="#2a9d8f" stroke-width="2"/>
+  <text x="417" y="373" fill="#1b6f60" font-size="14" font-weight="600" text-anchor="middle">Sensor</text>
+
+  <!-- feedback path, routed below, back to the summing junction -->
+  <path d="M 335,367 L 85,367 L 85,314" fill="none" stroke="#1b6f60" stroke-width="2.5" stroke-dasharray="5,4" marker-end="url(#fbArrow)"/>
+  <text x="210" y="410" fill="#1b6f60" font-size="12" text-anchor="middle" font-style="italic">measured value, fed back and subtracted from the setpoint</text>
+</svg>

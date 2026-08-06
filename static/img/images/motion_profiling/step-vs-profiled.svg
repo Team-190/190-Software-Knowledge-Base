@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="638" height="358" rx="14" fill="#ffffff" stroke="#d0d5dd" stroke-width="1.5"/>
+  <text x="320" y="28" fill="#1d3557" font-size="17" font-weight="700" text-anchor="middle">Chasing a Step Setpoint vs. Chasing a Profile</text>
+
+  <line x1="70" y1="50" x2="70" y2="300" stroke="#333" stroke-width="2"/>
+  <line x1="70" y1="300" x2="580" y2="300" stroke="#333" stroke-width="2"/>
+  <text x="325" y="335" fill="#333" font-size="14" text-anchor="middle">Time</text>
+  <text x="30" y="175" fill="#333" font-size="14" text-anchor="middle" transform="rotate(-90 30 175)">Position</text>
+
+  <!-- raw step setpoint: instant jump -->
+  <path d="M 70,260 L 130,260 L 130,90 L 580,90" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="450" y="80" fill="#333" font-size="13">raw setpoint (instant jump)</text>
+
+  <!-- motor chasing raw step: fast, jerky, overshoots -->
+  <path d="M 70,260 C 110,240 140,150 175,120 C 205,95 220,145 245,150
+           C 265,153 280,110 300,118 C 320,126 330,110 350,113 C 400,110 460,90 580,90"
+        fill="none" stroke="#e63946" stroke-width="3"/>
+  <text x="170" y="200" fill="#9d0208" font-size="13" font-weight="700">chasing the raw step</text>
+  <text x="140" y="218" fill="#9d0208" font-size="12" font-style="italic">jerky, overshoots, hard on the mechanism</text>
+
+  <!-- motion profile: smooth ramp -->
+  <path d="M 70,260 C 140,255 200,220 260,180 C 320,140 380,110 440,95 C 480,88 520,90 580,90"
+        fill="none" stroke="#2a9d8f" stroke-width="3" stroke-dasharray="3,4"/>
+  <text x="400" y="140" fill="#1b6f60" font-size="13" font-weight="700">motion profile (smooth ramp)</text>
+
+  <!-- motor chasing profile: smooth, tracks closely -->
+  <path d="M 70,262 C 140,257 200,222 260,182 C 320,142 380,112 440,97 C 480,90 520,92 580,92"
+        fill="none" stroke="#457b9d" stroke-width="3"/>
+  <text x="230" y="290" fill="#1d3557" font-size="13" font-weight="700">chasing the profile</text>
+  <text x="220" y="308" fill="#1d3557" font-size="12" font-style="italic">smooth, closely tracks the whole way</text>
+</svg>

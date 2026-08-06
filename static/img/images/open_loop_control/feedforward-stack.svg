@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="638" height="338" rx="14" fill="#ffffff" stroke="#d0d5dd" stroke-width="1.5"/>
+  <text x="320" y="30" fill="#1d3557" font-size="17" font-weight="700" text-anchor="middle">Feedforward: Predicting the Voltage a Motor Will Need</text>
+
+  <!-- stacked bar -->
+  <rect x="120" y="70" width="120" height="50" fill="#e9c46a" stroke="#8a6d00" stroke-width="1.5"/>
+  <text x="180" y="100" fill="#5c4900" font-size="15" font-weight="700" text-anchor="middle">k_S</text>
+
+  <rect x="120" y="120" width="120" height="80" fill="#457b9d" stroke="#1d3557" stroke-width="1.5"/>
+  <text x="180" y="165" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">k_V &#183; v</text>
+
+  <rect x="120" y="200" width="120" height="50" fill="#2a9d8f" stroke="#1b6f60" stroke-width="1.5"/>
+  <text x="180" y="230" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">k_A &#183; a</text>
+
+  <line x1="240" y1="70" x2="280" y2="70" stroke="#333" stroke-width="1.5"/>
+  <line x1="240" y1="250" x2="280" y2="250" stroke="#333" stroke-width="1.5"/>
+  <line x1="270" y1="70" x2="270" y2="250" stroke="#333" stroke-width="1.5"/>
+  <text x="290" y="115" fill="#333" font-size="16" font-weight="700">=</text>
+
+  <rect x="330" y="110" width="130" height="80" rx="6" fill="#f1f3f5" stroke="#333" stroke-width="2"/>
+  <text x="395" y="145" fill="#1d3557" font-size="15" font-weight="700" text-anchor="middle">predicted</text>
+  <text x="395" y="167" fill="#1d3557" font-size="15" font-weight="700" text-anchor="middle">voltage</text>
+
+  <!-- legend / explanations -->
+  <rect x="480" y="72" width="16" height="16" fill="#e9c46a"/>
+  <text x="502" y="85" fill="#333" font-size="13">overcome static friction</text>
+  <rect x="480" y="150" width="16" height="16" fill="#457b9d"/>
+  <text x="502" y="163" fill="#333" font-size="13">hold a cruise speed</text>
+  <rect x="480" y="222" width="16" height="16" fill="#2a9d8f"/>
+  <text x="502" y="235" fill="#333" font-size="13">speed up or slow down</text>
+
+  <text x="320" y="290" fill="#555" font-size="13" text-anchor="middle" font-style="italic">v = desired velocity, a = desired acceleration, each term added before the motor ever moves</text>
+</svg>
