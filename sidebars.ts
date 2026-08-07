@@ -319,6 +319,26 @@ const sidebars: SidebarsConfig = {
           },
           collapsed: true,
           items: [],
+        },
+        {
+          type: 'category',
+          label: '📝 Contributing Guidelines',
+          link: {
+            type: 'doc',
+            id: 'software_engineering_practices/CONTRIBUTING_GUIDELINES',
+          },
+          collapsed: true,
+          items: [],
+        },
+        {
+          type: 'category',
+          label: '🤖 AI Policy',
+          link: {
+            type: 'doc',
+            id: 'software_engineering_practices/AI_POLICY',
+          },
+          collapsed: true,
+          items: []
         }
       ],
     },
@@ -411,7 +431,7 @@ const sidebars: SidebarsConfig = {
           items: [],
         },
       ],
-    }
+    },
   ],
 };
 
