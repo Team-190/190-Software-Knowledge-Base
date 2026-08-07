@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 540" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="698" height="538" rx="14" fill="#ffffff" stroke="#d0d5dd" stroke-width="1.5"/>
+  <text x="350" y="30" fill="#1d3557" font-size="18" font-weight="700" text-anchor="middle">Torque Ripple by Commutation Method</text>
+  <text x="350" y="48" fill="#555" font-size="13" text-anchor="middle" font-style="italic">torque output over one electrical revolution (0&#176; to 360&#176;), same vertical scale throughout</text>
+
+  <!-- row dividers -->
+  <line x1="90" y1="140" x2="650" y2="140" stroke="#eef0f2" stroke-width="1"/>
+  <line x1="90" y1="260" x2="650" y2="260" stroke="#eef0f2" stroke-width="1"/>
+  <line x1="90" y1="380" x2="650" y2="380" stroke="#eef0f2" stroke-width="1"/>
+
+  <!-- Row 1: Brushed -->
+  <text x="85" y="80" fill="#1d3557" font-size="15" font-weight="700" text-anchor="end">Brushed</text>
+  <line x1="90" y1="80" x2="650" y2="80" stroke="#dcdfe3" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M100,80 Q127,64 155,80 Q182,96 210,80 Q237,64 265,80 Q292,96 320,80 Q347,64 375,80 Q402,96 430,80 Q457,64 485,80 Q512,96 540,80 Q567,64 595,80 Q622,96 650,80"
+        fill="none" stroke="#e63946" stroke-width="3"/>
+
+  <!-- Row 2: Six-Step -->
+  <text x="85" y="200" fill="#1d3557" font-size="15" font-weight="700" text-anchor="end">Six-Step</text>
+  <line x1="90" y1="200" x2="650" y2="200" stroke="#dcdfe3" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 100.00,175 L 191.67,225 L 191.67,175 L 283.33,225 L 283.33,175 L 375.00,225 L 375.00,175 L 466.67,225 L 466.67,175 L 558.33,225 L 558.33,175 L 650.00,225"
+        fill="none" stroke="#e9c46a" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- Row 3: Sinusoidal -->
+  <text x="85" y="320" fill="#1d3557" font-size="15" font-weight="700" text-anchor="end">Sinusoidal</text>
+  <line x1="90" y1="320" x2="650" y2="320" stroke="#dcdfe3" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M100,313 Q145,306 191,313 Q237,320 283,313 Q329,306 375,313 Q421,320 467,313 Q512,306 558,313 Q604,320 650,313"
+        fill="none" stroke="#457b9d" stroke-width="3"/>
+
+  <!-- Row 4: FOC -->
+  <text x="85" y="440" fill="#1d3557" font-size="15" font-weight="700" text-anchor="end">FOC</text>
+  <line x1="90" y1="440" x2="650" y2="440" stroke="#dcdfe3" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M100,440 L650,440" fill="none" stroke="#2a9d8f" stroke-width="3"/>
+
+  <!-- axis -->
+  <line x1="90" y1="470" x2="650" y2="470" stroke="#333" stroke-width="1.5"/>
+  <text x="100" y="490" fill="#555" font-size="13">0&#176;</text>
+  <text x="365" y="490" fill="#555" font-size="13" text-anchor="middle">180&#176;</text>
+  <text x="650" y="490" fill="#555" font-size="13" text-anchor="end">360&#176;</text>
+  <text x="370" y="512" fill="#333" font-size="14" text-anchor="middle">rotor angle</text>
+
+  <text x="350" y="530" fill="#555" font-size="13" text-anchor="middle" font-style="italic">ripple shrinks moving down the list, FOC holds torque essentially constant</text>
+</svg>

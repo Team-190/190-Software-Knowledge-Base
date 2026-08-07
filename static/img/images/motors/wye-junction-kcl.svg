@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="598" height="438" rx="14" fill="#ffffff" stroke="#d0d5dd" stroke-width="1.5"/>
+  <text x="300" y="26" fill="#1d3557" font-size="18" font-weight="700" text-anchor="middle">The Three Windings Share One Center Point</text>
+
+  <defs>
+    <marker id="kclArrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#1d3557"/>
+    </marker>
+  </defs>
+
+  <!-- three winding legs -->
+  <line x1="300" y1="240" x2="300" y2="70" stroke="#495057" stroke-width="3"/>
+  <line x1="300" y1="240" x2="447.2" y2="325" stroke="#495057" stroke-width="3"/>
+  <line x1="300" y1="240" x2="152.8" y2="325" stroke="#495057" stroke-width="3"/>
+
+  <!-- coil symbols along each leg -->
+  <g transform="translate(300,145)">
+    <ellipse cx="0" cy="0" rx="18" ry="24" fill="#c17a3d" stroke="#7a4a1f" stroke-width="1.5"/>
+    <line x1="-16" y1="-12" x2="16" y2="-12" stroke="#7a4a1f" stroke-width="1.5"/>
+    <line x1="-18" y1="0" x2="18" y2="0" stroke="#7a4a1f" stroke-width="1.5"/>
+    <line x1="-16" y1="12" x2="16" y2="12" stroke="#7a4a1f" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(386.6,290)">
+    <ellipse cx="0" cy="0" rx="18" ry="24" fill="#c17a3d" stroke="#7a4a1f" stroke-width="1.5"/>
+    <line x1="-16" y1="-12" x2="16" y2="-12" stroke="#7a4a1f" stroke-width="1.5"/>
+    <line x1="-18" y1="0" x2="18" y2="0" stroke="#7a4a1f" stroke-width="1.5"/>
+    <line x1="-16" y1="12" x2="16" y2="12" stroke="#7a4a1f" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(213.4,290)">
+    <ellipse cx="0" cy="0" rx="18" ry="24" fill="#c17a3d" stroke="#7a4a1f" stroke-width="1.5"/>
+    <line x1="-16" y1="-12" x2="16" y2="-12" stroke="#7a4a1f" stroke-width="1.5"/>
+    <line x1="-18" y1="0" x2="18" y2="0" stroke="#7a4a1f" stroke-width="1.5"/>
+    <line x1="-16" y1="12" x2="16" y2="12" stroke="#7a4a1f" stroke-width="1.5"/>
+  </g>
+
+  <!-- terminal dots -->
+  <circle cx="300" cy="70" r="5" fill="#1d3557"/>
+  <circle cx="447.2" cy="325" r="5" fill="#1d3557"/>
+  <circle cx="152.8" cy="325" r="5" fill="#1d3557"/>
+
+  <!-- phase labels -->
+  <text x="320" y="75" fill="#1d3557" font-size="15" font-weight="700" text-anchor="start">Phase A</text>
+  <text x="465" y="330" fill="#1d3557" font-size="15" font-weight="700" text-anchor="start">Phase B</text>
+  <text x="135" y="330" fill="#1d3557" font-size="15" font-weight="700" text-anchor="end">Phase C</text>
+
+  <!-- shared center point -->
+  <circle cx="300" cy="240" r="7" fill="#e63946"/>
+  <text x="330" y="235" fill="#9d0208" font-size="15" font-weight="700">shared center point</text>
+
+  <!-- current arrows: Ia flows IN, Ib and Ic flow OUT -->
+  <line x1="300" y1="185" x2="300" y2="248" stroke="#1d3557" stroke-width="4" marker-end="url(#kclArrow)"/>
+  <text x="315" y="215" fill="#1d3557" font-size="16" font-weight="700">I_a in</text>
+
+  <line x1="300" y1="240" x2="351.9" y2="270" stroke="#1d3557" stroke-width="4" marker-end="url(#kclArrow)"/>
+  <text x="368" y="300" fill="#1d3557" font-size="16" font-weight="700" text-anchor="start">I_b out</text>
+
+  <line x1="300" y1="240" x2="248.1" y2="270" stroke="#1d3557" stroke-width="4" marker-end="url(#kclArrow)"/>
+  <text x="232" y="300" fill="#1d3557" font-size="16" font-weight="700" text-anchor="end">I_c out</text>
+
+  <text x="300" y="400" fill="#333" font-size="20" text-anchor="middle" font-weight="700">I_a + I_b + I_c = 0</text>
+  <text x="300" y="422" fill="#555" font-size="13" text-anchor="middle" font-style="italic">whatever flows in at the junction has to flow back out, current can't pile up or vanish</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="598" height="318" rx="14" fill="#ffffff" stroke="#d0d5dd" stroke-width="1.5"/>
+  <text x="300" y="30" fill="#1d3557" font-size="18" font-weight="700" text-anchor="middle">The Motor's Circuit While Spinning</text>
+
+  <!-- loop wires -->
+  <line x1="90" y1="90" x2="360" y2="90" stroke="#333" stroke-width="3"/>
+  <line x1="90" y1="230" x2="360" y2="230" stroke="#333" stroke-width="3"/>
+  <line x1="90" y1="90" x2="90" y2="140" stroke="#333" stroke-width="3"/>
+  <line x1="90" y1="180" x2="90" y2="230" stroke="#333" stroke-width="3"/>
+  <line x1="410" y1="90" x2="360" y2="90" stroke="#333" stroke-width="3"/>
+  <line x1="410" y1="230" x2="360" y2="230" stroke="#333" stroke-width="3"/>
+  <line x1="410" y1="90" x2="410" y2="140" stroke="#333" stroke-width="3"/>
+  <line x1="410" y1="180" x2="410" y2="230" stroke="#333" stroke-width="3"/>
+
+  <!-- battery symbol (left side) -->
+  <line x1="70" y1="140" x2="110" y2="140" stroke="#333" stroke-width="4"/>
+  <line x1="80" y1="152" x2="100" y2="152" stroke="#333" stroke-width="2"/>
+  <line x1="70" y1="168" x2="110" y2="168" stroke="#333" stroke-width="4"/>
+  <line x1="80" y1="180" x2="100" y2="180" stroke="#333" stroke-width="2"/>
+  <text x="30" y="160" fill="#1d3557" font-size="15" font-weight="700">V</text>
+  <text x="10" y="178" fill="#555" font-size="12">applied</text>
+
+  <!-- resistor symbol (top) -->
+  <polyline points="200,90 210,75 225,105 240,75 255,105 270,75 280,90" fill="none" stroke="#333" stroke-width="3"/>
+  <text x="240" y="60" fill="#1d3557" font-size="15" font-weight="700" text-anchor="middle">R</text>
+  <text x="240" y="45" fill="#555" font-size="12" text-anchor="middle">winding resistance</text>
+
+  <!-- back-emf source (right side) -->
+  <circle cx="410" cy="160" r="30" fill="#fdf3d9" stroke="#e9c46a" stroke-width="2.5"/>
+  <text x="410" y="167" fill="#8a6d00" font-size="20" font-weight="700" text-anchor="middle">~</text>
+  <text x="450" y="145" fill="#8a6d00" font-size="15" font-weight="700">back-EMF</text>
+  <text x="450" y="165" fill="#8a6d00" font-size="15" font-weight="700">K_v &#183; &#969;</text>
+  <text x="450" y="185" fill="#555" font-size="12">(opposes V)</text>
+
+  <!-- current arrow -->
+  <line x1="150" y1="230" x2="300" y2="230" stroke="#457b9d" stroke-width="3" marker-end="url(#iArrow)"/>
+  <text x="225" y="255" fill="#457b9d" font-size="15" font-weight="700" text-anchor="middle">I</text>
+
+  <defs>
+    <marker id="iArrow" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#457b9d"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="295" fill="#333" font-size="16" text-anchor="middle" font-weight="700">V = I &#183; R + K_v &#183; &#969;</text>
+</svg>

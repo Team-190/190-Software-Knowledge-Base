@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 220" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="458" height="218" rx="14" fill="#ffffff" stroke="#d0d5dd" stroke-width="1.5"/>
+  <text x="230" y="28" fill="#1d3557" font-size="16" font-weight="700" text-anchor="middle">SPI: One Controller, One Peripheral</text>
+
+  <rect x="30" y="50" width="140" height="120" rx="8" fill="#eef2ff" stroke="#457b9d" stroke-width="2"/>
+  <text x="100" y="115" fill="#1d3557" font-size="15" font-weight="600" text-anchor="middle">Controller</text>
+
+  <rect x="290" y="50" width="140" height="120" rx="8" fill="#fdf3d9" stroke="#e9c46a" stroke-width="2"/>
+  <text x="360" y="115" fill="#8a6d00" font-size="15" font-weight="600" text-anchor="middle">Peripheral</text>
+
+  <defs>
+    <marker id="specR" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#333"/>
+    </marker>
+    <marker id="specL" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M9,0 L0,4.5 L9,9 Z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <line x1="170" y1="75" x2="290" y2="75" stroke="#333" stroke-width="2.5" marker-end="url(#specR)"/>
+  <text x="230" y="70" fill="#333" font-size="13" text-anchor="middle">SCLK</text>
+
+  <line x1="170" y1="100" x2="290" y2="100" stroke="#333" stroke-width="2.5" marker-end="url(#specR)"/>
+  <text x="230" y="95" fill="#333" font-size="13" text-anchor="middle">MOSI</text>
+
+  <line x1="170" y1="125" x2="290" y2="125" stroke="#333" stroke-width="2.5" marker-start="url(#specL)"/>
+  <text x="230" y="120" fill="#333" font-size="13" text-anchor="middle">MISO</text>
+
+  <line x1="170" y1="150" x2="290" y2="150" stroke="#333" stroke-width="2.5" marker-end="url(#specR)"/>
+  <text x="230" y="145" fill="#333" font-size="13" text-anchor="middle">CS</text>
+
+  <text x="230" y="200" fill="#555" font-size="12" text-anchor="middle" font-style="italic">the controller drives the clock; the peripheral just follows along</text>
+</svg>
