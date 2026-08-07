@@ -128,8 +128,8 @@ alt="floatingpointerror"
 
 Floating point numbers are designed to balance:
 
-- **range**, how large or small a number can be
-- **precision**, how accurate the stored value is
+- **range**: how large or small a number can be
+- **precision**: how accurate the stored value is
 
 By using exponents, floating point numbers can represent extremely large and extremely small values. However, this comes at the cost of perfect precision.
 
