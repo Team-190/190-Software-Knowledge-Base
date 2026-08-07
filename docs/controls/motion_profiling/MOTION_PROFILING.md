@@ -10,7 +10,7 @@ fixes this, not by changing the controller, but by changing what's being asked o
 
 <img
 src={useBaseUrl("img/images/motion_profiling/step-vs-profiled.svg")}
-alt="A controller chasing an instant step setpoint moves jerkily and overshoots, while the same controller chasing a smooth motion profile tracks it closely the whole way"
+alt="A controller chasing an instant step setpoint overshoots and rings before settling, while the same controller chasing a smooth motion profile tracks it closely the whole way with no overshoot"
 width="580"
 />
 
