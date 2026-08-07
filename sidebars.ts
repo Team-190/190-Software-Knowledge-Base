@@ -207,6 +207,16 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
+          label: '📶 NetworkTables',
+          link: {
+            type: 'doc',
+            id: 'robot_code/NETWORKTABLES',
+          },
+          collapsed: true,
+          items: [],
+        },
+        {
+          type: 'category',
           label: '🐐 GompeiLib',
           link: {
             type: 'doc',
@@ -317,72 +327,23 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Networking',
-      link: {
-        type: 'generated-index',
-      },
-      collapsed: true,
-      items: [
-        {
-          type: 'category',
-          label: '🌐 IP Addressing & Subnets',
-          link: {
-            type: 'doc',
-            id: 'networking/IP_ADDRESSING',
-          },
-          collapsed: true,
-          items: [],
-        },
-        {
-          type: 'category',
-          label: '🚪 Ports & Transport (TCP/UDP)',
-          link: {
-            type: 'doc',
-            id: 'networking/PORTS_AND_TRANSPORT',
-          },
-          collapsed: true,
-          items: [],
-        },
-        {
-          type: 'category',
-          label: '📛 DNS & Name Resolution',
-          link: {
-            type: 'doc',
-            id: 'networking/DNS',
-          },
-          collapsed: true,
-          items: [],
-        },
-        {
-          type: 'category',
-          label: '🕸️ FRC Network Topology',
-          link: {
-            type: 'doc',
-            id: 'networking/FRC_NETWORK_TOPOLOGY',
-          },
-          collapsed: true,
-          items: [],
-        },
-        {
-          type: 'category',
-          label: '📶 NetworkTables',
-          link: {
-            type: 'doc',
-            id: 'networking/NETWORKTABLES',
-          },
-          collapsed: true,
-          items: [],
-        },
-      ],
-    },
-    {
-      type: 'category',
       label: 'Vision & Localization',
       link: {
         type: 'generated-index',
       },
       collapsed: true,
       items: [
+        'vision_localization/VISION_LOCALIZATION_INTRODUCTION',
+        {
+          type: 'category',
+          label: '🧭 Coordinate Frames',
+          link: {
+            type: 'doc',
+            id: 'vision_localization/COORDINATE_FRAMES',
+          },
+          collapsed: true,
+          items: [],
+        },
         {
           type: 'category',
           label: '🛞 Odometry',
@@ -395,10 +356,20 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
-          label: '📷 Cameras',
+          label: '🏷️ Landmarks & AprilTags',
           link: {
             type: 'doc',
-            id: 'vision_localization/CAMERAS',
+            id: 'vision_localization/LANDMARKS',
+          },
+          collapsed: true,
+          items: [],
+        },
+        {
+          type: 'category',
+          label: '🔧 Hardware',
+          link: {
+            type: 'doc',
+            id: 'vision_localization/HARDWARE',
           },
           collapsed: true,
           items: [],
@@ -409,16 +380,6 @@ const sidebars: SidebarsConfig = {
           link: {
             type: 'doc',
             id: 'vision_localization/VISION_PROCESSING',
-          },
-          collapsed: true,
-          items: [],
-        },
-        {
-          type: 'category',
-          label: '🧭 Coordinate Frames',
-          link: {
-            type: 'doc',
-            id: 'vision_localization/COORDINATE_FRAMES',
           },
           collapsed: true,
           items: [],
@@ -449,6 +410,16 @@ const sidebars: SidebarsConfig = {
           link: {
             type: 'doc',
             id: 'vision_localization/LATENCY',
+          },
+          collapsed: true,
+          items: [],
+        },
+        {
+          type: 'category',
+          label: '🚀 Advanced Vision Techniques',
+          link: {
+            type: 'doc',
+            id: 'vision_localization/ADVANCED_VISION_TECHNIQUES',
           },
           collapsed: true,
           items: [],
