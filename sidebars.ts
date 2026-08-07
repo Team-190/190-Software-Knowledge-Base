@@ -295,7 +295,6 @@ const sidebars: SidebarsConfig = {
             'controls/motors/COMPARISON',
           ],
         },
-        'controls/current_control/CURRENT_CONTROL',
         {
           type: 'category',
           label: '📟 Hardware Communication',
@@ -314,66 +313,6 @@ const sidebars: SidebarsConfig = {
             'controls/hardware_communication/COMPARISON',
           ],
         },
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Software Engineering Practices',
-      link: {
-        type: 'generated-index',
-      },
-      collapsed: true,
-      items: [
-        {
-          type: 'category',
-          label: '🔀 Version Control',
-          link: {
-            type: 'doc',
-            id: 'software_engineering_practices/VERSION_CONTROL',
-          },
-          collapsed: true,
-          items: [],
-        },
-        {
-          type: 'category',
-          label: '✅ Code Quality',
-          link: {
-            type: 'doc',
-            id: 'software_engineering_practices/CODE_QUALITY',
-          },
-          collapsed: true,
-          items: [],
-        },
-        {
-          type: 'category',
-          label: '📈 Team Development',
-          link: {
-            type: 'doc',
-            id: 'software_engineering_practices/TEAM_DEVELOPMENT',
-          },
-          collapsed: true,
-          items: [],
-        },
-        {
-          type: 'category',
-          label: '📝 Contributing Guidelines',
-          link: {
-            type: 'doc',
-            id: 'software_engineering_practices/CONTRIBUTING_GUIDELINES',
-          },
-          collapsed: true,
-          items: [],
-        },
-        {
-          type: 'category',
-          label: '🤖 AI Policy',
-          link: {
-            type: 'doc',
-            id: 'software_engineering_practices/AI_POLICY',
-          },
-          collapsed: true,
-          items: []
-        }
       ],
     },
     {
@@ -514,6 +453,66 @@ const sidebars: SidebarsConfig = {
           collapsed: true,
           items: [],
         },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Software Engineering Practices',
+      link: {
+        type: 'generated-index',
+      },
+      collapsed: true,
+      items: [
+        {
+          type: 'category',
+          label: '🔀 Version Control',
+          link: {
+            type: 'doc',
+            id: 'software_engineering_practices/VERSION_CONTROL',
+          },
+          collapsed: true,
+          items: [],
+        },
+        {
+          type: 'category',
+          label: '✅ Code Quality',
+          link: {
+            type: 'doc',
+            id: 'software_engineering_practices/CODE_QUALITY',
+          },
+          collapsed: true,
+          items: [],
+        },
+        {
+          type: 'category',
+          label: '📈 Team Development',
+          link: {
+            type: 'doc',
+            id: 'software_engineering_practices/TEAM_DEVELOPMENT',
+          },
+          collapsed: true,
+          items: [],
+        },
+        {
+          type: 'category',
+          label: '📝 Contributing Guidelines',
+          link: {
+            type: 'doc',
+            id: 'software_engineering_practices/CONTRIBUTING_GUIDELINES',
+          },
+          collapsed: true,
+          items: [],
+        },
+        {
+          type: 'category',
+          label: '🤖 AI Policy',
+          link: {
+            type: 'doc',
+            id: 'software_engineering_practices/AI_POLICY',
+          },
+          collapsed: true,
+          items: []
+        }
       ],
     },
   ],
