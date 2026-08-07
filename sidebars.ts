@@ -42,7 +42,7 @@ const sidebars: SidebarsConfig = {
           label: '🧑‍💻 Fundamental Concepts',
           link: {
             type: 'doc',
-            id: 'java/fundamentals/PROGRAM_SKELETON',
+            id: 'java/FUNDAMENTALS',
           },
           collapsed: true,
           items: [
