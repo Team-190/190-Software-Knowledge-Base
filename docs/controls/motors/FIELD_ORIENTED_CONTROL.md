@@ -148,8 +148,7 @@ possibly respond that the staircase of small, reactive corrections converges ont
 a perfectly clairvoyant, non-reactive controller would have produced. The reactivity is real, it just never gets
 enough time between corrections to turn into anything visible.
 
-That steady, well-regulated $I_q$ is exactly what makes
-[commanding motor current directly from robot code](../current_control/CURRENT_CONTROL.md), covered next, practical
+That steady, well-regulated $I_q$ is exactly what makes commanding motor current directly from robot code practical
 in the first place, without FOC holding it smooth, a raw current setpoint would be fighting the same ripple problem
 this whole page exists to solve.
 

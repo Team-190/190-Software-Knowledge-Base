@@ -24,9 +24,8 @@ all at once. Every layer exists because the one before it had a limitation.
 
 None of that chain has needed to know exactly *how* a motor turns a voltage or a current setpoint into a push, just
 that it does. [Motors and Commutation](../motors/MOTORS.md) is up next, and grounds all of it out: where torque
-actually comes from, why $k_V$ and $k_A$ in a feedforward model are the same constants a motor's own circuit
-equation predicts, and why commanding current, from [Current Control](../current_control/CURRENT_CONTROL.md), works
-as well as it does.
+actually comes from, and why $k_V$ and $k_A$ in a feedforward model are the same constants a motor's own circuit
+equation predicts.
 
 For how the roboRIO actually gets a profile's setpoints, a PID correction, and a feedforward voltage out to a motor
 controller in the first place, see the [Hardware Communication](../hardware_communication/HARDWARE_COMMUNICATION.md)

@@ -1,41 +1,53 @@
-# Website
+# FRC 190 Software Knowledge Base
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+A structured training curriculum for Team 190's programming students, covering the full stack of
+competition robot software: Java fundamentals, robot code architecture, control systems, networking,
+vision and localization, and team software engineering practices.
 
-### Installation
+Built with [Docusaurus](https://docusaurus.io/) and published at
+[team-190.github.io/190-Software-Knowledge-Base](https://team-190.github.io/190-Software-Knowledge-Base/).
 
-```
-$ yarn
-```
+## Structure
 
-### Local Development
+Content lives under `docs/`, organized into sections that build on each other:
 
-```
-$ yarn start
-```
+* **FRC Hardware** — the roboRIO/SystemCore and the rest of the robot's electrical stack
+* **Java** — fundamentals, control flow, OOP, data structures, advanced concepts
+* **190 Robot Code** — lifecycle, architecture, hardware abstraction, subsystem state management,
+  logging, and GompeiLib
+* **Controls** — open loop, closed loop, motion profiling, motors/commutation, and hardware
+  communication protocols
+* **Networking** — IP addressing, ports/transport, DNS, FRC network topology, NetworkTables
+* **Vision & Localization** — odometry, cameras, vision processing, coordinate frames, pose
+  estimation, sensor fusion, latency
+* **Software Engineering Practices** — version control, code quality, team development,
+  contributing guidelines, AI policy
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Sidebar ordering and grouping is defined in `sidebars.ts`; it's the source of truth for how pages
+relate to each other, not just the folder layout under `docs/`.
 
-### Build
+## Local Development
 
-```
-$ yarn build
-```
-
-<!-- This command generates static content into the `build` directory and can be served using any static contents hosting service. -->
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
+Install dependencies:
 
 ```
-$ GIT_USER=<Your GitHub username> yarn deploy
+$ npm install
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Start a local dev server (most changes hot-reload without a restart):
+
+```
+$ npm run start
+```
+
+Type-check the site:
+
+```
+$ npm run typecheck
+```
+
+Build the static site into `build/`:
+
+```
+$ npm run build
+```
