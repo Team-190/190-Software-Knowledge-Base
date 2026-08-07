@@ -52,8 +52,7 @@ individual 1,500-byte frames, each one built, sent, and acknowledged just to mov
 
 That's the practical reason the payload above is capped at 1,500 bytes in the first place: anything bigger than a
 single frame simply gets broken into as many frames as it takes, then stitched back together once every piece
-arrives, a job handled by the software layers covered in [Networking](../../networking/FRC_NETWORK_TOPOLOGY.md),
-not by Ethernet itself.
+arrives, a job handled by the network stack's higher-level protocols, not by Ethernet itself.
 
 ## Switching: Packets Go Only Where They're Addressed
 
@@ -76,8 +75,7 @@ automatically negotiates with whatever it's plugged into, a radio, a switch, a c
 the two speeds both ends support. That's already an entire order of magnitude beyond [CAN's](./CAN_BUS.md) 1 Mbit/s,
 which is exactly why Ethernet, not CAN, is what carries camera images and NetworkTables traffic on the robot.
 
-Everything above is just the wiring, though, how those bits actually find their way to the right device (addresses,
-ports, NetworkTables, and the rest of the robot's network layout) is its own topic, covered in
-[Networking](../../networking/FRC_NETWORK_TOPOLOGY.md).
+Everything above is just the wiring, though, how robot code actually uses that wiring to share live data with
+dashboards and coprocessors is its own topic, covered in [NetworkTables](../../robot_code/NETWORKTABLES.md).
 
 See [Comparing the Protocols](./COMPARISON.md) for how all six protocols in this section stack up against each other.
