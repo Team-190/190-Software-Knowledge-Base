@@ -32,6 +32,7 @@ always stays one step ahead of it.
 
 ## Where This Leads Next
 
-Everything on this page measures, predicts, and computes torque, but never actually holds it steady on purpose.
-That's exactly what [Current Control](../current_control/CURRENT_CONTROL.md) does next: commanding motor current,
-and therefore torque, directly from robot code, made practical by the steady $I_q$ FOC produces.
+Every scheme in the table above still needs to get a voltage or duty cycle command from the roboRIO to the motor
+controller, and a reading back, before any of it turns into a push. The
+[Hardware Communication](../hardware_communication/HARDWARE_COMMUNICATION.md) addendum covers how those signals
+actually travel over the wire.
