@@ -8,7 +8,7 @@ change: getting access, setting up your machine, and shipping a pull request tha
 
 Before you can contribute, you need to actually be able to see the code:
 
-1. Ask a mentor or a lead student to add your GitHub account to the ```Team-190``` GitHub organization.
+1. Ask a mentor to add your GitHub account to the ```Team-190``` GitHub organization.
 2. Confirm you can see and clone ```2kxx-Robot-Code```, ```GompeiLib```, and (if you're working on vision)
    ```GompeiVision```.
 3. If you're picking up this knowledge base itself, you'll want access to it too, it's a normal repository like
@@ -36,17 +36,22 @@ local Gradle subproject and building it in isolation works a little differently.
 
 ## Finding Something to Work On
 
-Don't guess at what the team needs. Talk to whoever owns the subsystem or area you're interested in, usually a lead
-student or a mentor, before you start writing code. This avoids two common failure modes: duplicating work someone
-else already started, and spending a week building something that doesn't actually fit into the robot's current
-design. A five-minute conversation up front is cheaper than a pull request nobody can merge.
+Don't guess at what the team needs, and don't go looking for work on your own either, your Task Manager should
+already have an issue with your name on it. If you don't have a Task Manager yet, or you're not sure whose
+subsystem or area you'd be stepping into, ask a mentor before you start writing code. This avoids two common
+failure modes: duplicating work someone else already started, and spending a week building something that doesn't
+actually fit into the robot's current design. A five-minute conversation up front is cheaper than a pull request
+nobody can merge.
 
 ## Making a Change
 
-1. **Branch off ```development```** with a name that describes what you're doing, see
-   [Version Control](VERSION_CONTROL.md#topic-branches) for naming conventions.
-   ```development``` is where the season's work lives day to day; ```main``` is only touched right before an
-   event, see [Version Control](VERSION_CONTROL.md#two-long-lived-branches-main-and-development).
+1. **Branch off whatever your work actually builds on.** Most of the time that's the feature branch your work
+   belongs to, with your own branch following the ```<feature>/<subfeature>/...``` naming convention, see
+   [Feature and Subfeature Branch Naming](VERSION_CONTROL.md#feature-and-subfeature-branch-naming) for how that's
+   named; an event or fix/testing branch instead comes straight off ```development```, see
+   [Topic Branches](VERSION_CONTROL.md#topic-branches). ```development``` is where the season's work lives day to
+   day; ```main``` is only touched right before an event, see
+   [Version Control](VERSION_CONTROL.md#two-long-lived-branches-main-and-development).
 2. **Write the change.** Follow the patterns already established in the codebase, see
    [Subsystem State Management](../robot_code/SUBSYSTEM_STATE_MANAGEMENT.md) and
    [Hardware Abstraction](../robot_code/HARDWARE_ABSTRACTION.md) for how subsystems in this codebase are expected
@@ -60,7 +65,10 @@ design. A five-minute conversation up front is cheaper than a pull request nobod
 
 ## Opening the Pull Request
 
-* Push your branch and open a PR against ```development```, not ```main```.
+* Push your branch and open a PR against whatever it branched off of, that's not always ```development```, a
+  subfeature branch's PR targets its feature branch first, see
+  [Feature and Subfeature Branch Naming](VERSION_CONTROL.md#feature-and-subfeature-branch-naming). Then request
+  review from whoever owns that branch.
 * If it's not finished yet, open it as a **draft** so you're not triggering CI or requesting review prematurely.
 * Write a description that tells a reviewer *what* changed and *why*, not just "updates". If the change is hard to
   explain in a sentence, that's often a sign it should have been two smaller PRs instead of one.
@@ -410,7 +418,7 @@ jump straight to wherever it was told and had no way to walk there safely. That'
 
 If you're stuck, ask. In order of who's likely to unblock you fastest:
 
-1. The lead student who owns the subsystem or area you're working in.
+1. Whoever owns the feature or subsystem you're working in.
 2. A mentor, especially for anything architectural or safety-related.
 3. This knowledge base, for anything that's a gap in your own understanding rather than a question about a specific
    decision someone else made.

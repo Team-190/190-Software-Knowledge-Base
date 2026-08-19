@@ -19,18 +19,104 @@ here so the next person doesn't need you to repeat it.
 
 ## Roles on the Software Sub-Team
 
-Not everyone on the software sub-team is doing the same job at the same time:
+Not everyone on the software sub-team is doing the same job at the same time. Three student roles form a ladder,
+each stepping up in scope, and each tied to a level of the git branch hierarchy, see
+[Feature and Subfeature Branch Naming](VERSION_CONTROL.md#feature-and-subfeature-branch-naming) for how that
+hierarchy shows up in a branch name itself. These roles aren't rigid job titles, they shift as students gain
+experience, sometimes within the same season. The point of naming them is that when you open a pull request, it
+should be clear who you expect to review it and why.
 
-* **Mentors** set technical direction, review architecture-level decisions, and are the final backstop before
-  something questionable makes it onto the competition robot.
-* **Lead / veteran students** own specific subsystems or shared infrastructure (like ```GompeiLib```), review
-  pull requests from less experienced teammates, and are usually the first point of contact when something breaks.
-* **Rookies and newer students** work on scoped, well-defined pieces of a subsystem, with the expectation that
-  their code gets reviewed closely, not as a formality, but because review is how they learn the team's actual
-  conventions instead of just what compiles.
+Two rules repeat at every level of the ladder below: a role creates the GitHub issues for the role beneath it,
+never for itself, and a role can create branches for its own level and for every level beneath it. A Software
+Developer sits at the bottom of both, so they never create their own issues, but they do create their own branch.
 
-These roles aren't rigid job titles, they shift as students gain experience. The point of naming them is that when
-you open a pull request, it should be clear who you expect to review it and why.
+### Software Developer
+
+Every student starts here. A Software Developer writes isolated code in a ```<feature>/<subfeature>/...```
+branch, which they branch off their Task Manager's feature branch themselves, completing tightly focused tasks,
+common ones being:
+
+* Writing a specific sub-command
+* Implementing subfeatures of a subsystem
+* Implementing individual utility classes or functions
+* Fixing isolated bugs
+* Adding or updating tests
+* Making small, well-defined changes to existing behavior
+
+Beyond writing the code itself, a Software Developer is expected to:
+
+* Work the GitHub issues their Task Manager has already created for them, rather than creating their own, and
+  keep those issues updated with progress, blockers, and testing notes.
+* Make sure their own code works before requesting review: test in simulation where practical, test on the real
+  robot when practical and safe, verify existing functionality hasn't broken, and resolve known errors, warnings,
+  and failing tests before asking for approval.
+* Open a pull request once their work is ready for integration, clearly describing the changes made, the testing
+  performed, and any known limitations, then request review from the appropriate Task Manager or Lead Software
+  Developer.
+* Review peers' work when appropriate, participate in simulation and real-robot testing, and help inform
+  architecture decisions for the small portions of the codebase they touch.
+* Work within the git organization according to the team's workflows and pipelines, respond to review feedback
+  and make requested changes before approval, and never approve their own pull requests or merge their own work.
+
+### Task Manager
+
+A Task Manager manages a robot feature branch, using the ```<feature>/...``` naming convention, and makes
+architecture decisions for that individual feature. They lead a 1-3 developer subgroup on a wide-scoped robot
+task, common ones being:
+
+* Implementing a subsystem
+* Designing a complex multi-subsystem behavior or command
+* Implementing a full autonomous routine
+* Implementing a button layout
+* Debugging and fixing faulty robot behavior
+
+A Task Manager is expected to:
+
+* Create the feature branch itself if the Lead Software Developer hasn't already, as well as the
+  ```<feature>/<subfeature>/...``` branch for each Software Developer in their subgroup.
+* Break larger features into appropriately sized issues and assign that work to Software Developers, creating the
+  issues for the individual subfeature-level tasks required to complete the feature, since Software Developers
+  don't create their own.
+* Maintain the feature branch, making sure the work being integrated into it stays compatible with the overall
+  feature, and review subgroup members' code.
+* Approve pull requests from lower-level branches into the feature branch, only once the code has been
+  adequately tested, and keep the feature branch buildable and functional as development progresses.
+* Coordinate simulation and real-robot testing of the feature, resolve or escalate architectural conflicts within
+  it, and recognize when a change is outside their scope of authority so it can go to the Lead Software Developer
+  instead.
+* Prepare a completed feature for the Lead Software Developer's review, making sure it's sufficiently tested and
+  documented before requesting approval to merge it into ```development```. A Task Manager does not merge code
+  into ```development``` without Lead Software Developer approval.
+
+### Lead Software Developer
+
+The Lead Software Developer maintains the overall technical direction and architecture of the software codebase,
+and defines and maintains the team's development workflow and git organization, including managing
+```development``` itself.
+
+They're expected to:
+
+* Create and manage feature-level issues, breaking large software initiatives into features and cross-feature
+  changes that can be delegated to Task Managers, along with issues for software-wide tasks, architectural work,
+  and technical debt that don't belong to any one feature.
+* Create and manage the top-level ```<feature>``` branches for major robot features (and lower-level branches
+  when necessary), and review and approve pull requests from feature branches into ```development```.
+* Review architecture decisions that affect multiple subsystems or the overall codebase, and resolve
+  disagreements between Task Managers over architecture or implementation.
+* Ensure that code merged into ```development``` meets the team's standards for correctness, testing,
+  maintainability, architecture, documentation, and git workflow, verifying a feature has been adequately tested
+  before approving its merge.
+* Coordinate full-system integration testing, and establish and maintain the team's coding standards, review
+  standards, and testing expectations.
+* Mentor Task Managers and Software Developers in software design, git, testing, debugging, and code review,
+  helping students grow into making increasingly broad technical decisions on their own.
+
+The Lead Software Developer has final student authority over software architecture and
+```development```-branch integration decisions, and having permission to merge directly is not a reason to
+bypass the review process. Day to day, their highest-level integration authority is ```development```: promoting
+```development``` to ```main``` is the one exception, and it isn't theirs to do alone, a mentor and the Lead
+Software Developer promote ```main``` together, see
+[Promoting development to main](VERSION_CONTROL.md#promoting-development-to-main).
 
 ## Code Review Is a Teaching Tool, Not Just a Gate
 
@@ -68,7 +154,8 @@ things from how the team develops software:
   exist for last-minute, at-competition tuning, and code review needs to happen quickly without becoming a
   bottleneck. All of that still lands on ```development```, not ```main```, see
   [Version Control](VERSION_CONTROL.md#two-long-lived-branches-main-and-development); ```main``` only gets updated
-  once, right before the event, when a mentor or lead promotes ```development``` up to it.
+  once, right before the event, when a mentor and the Lead Software Developer together promote ```development```
+  up to it, see [Roles on the Software Sub-Team](#roles-on-the-software-sub-team).
 * **In the off-season**, there's room to do the things build season never has time for: paying down technical debt
   in ```GompeiLib```, writing the unit tests that season code skips, prototyping a "v2" of a mechanism
   (```v2-bringup```, ```turret-testing```), and updating this knowledge base itself.
