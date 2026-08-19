@@ -47,7 +47,8 @@ that the branch's destination is ```development``` instead of ```main```. Lookin
 
 * **Feature branches**: named after the thing being built, e.g. ```feature-v2-shooter``` or ```v2-intake-stow-fixes```.
   Branched off ```development```, and merged back into it once the feature works. Used for season-long development work
-  that isn't tied to a specific competition.
+  that isn't tied to a specific competition. Anything underneath a feature branch follows a stricter, slash-based
+  naming convention, see [Feature and Subfeature Branch Naming](#feature-and-subfeature-branch-naming) below.
 * **Event branches**: named after the competition being prepared for, e.g. ```event-bc-turnover``` or
   ```event_mawor```. Used for the tuning and bugfixing that happens in the days leading up to and during an event, where
   changes need to be fast, isolated, and easy to throw away if they don't work out. These also merge back into
@@ -55,22 +56,53 @@ that the branch's destination is ```development``` instead of ```main```. Lookin
 * **Fix / testing branches**: smaller, targeted branches like ```climber-pids``` or ```button-bindings``` for a single
   focused change.
 
-There's no strict prefix system enforced by the tooling, but the naming should tell a teammate what the branch is *for*
-at a glance. A branch called ```patch1``` tells the next person nothing; a branch called
-```turret-testing``` does.
+Event and fix/testing branches don't follow a strict prefix system enforced by the tooling, but the naming should tell
+a teammate what the branch is *for* at a glance. A branch called ```patch1``` tells the next person nothing; a branch
+called ```turret-testing``` does. Feature branches, on the other hand, *do* follow a strict convention, described next.
 
-A large feature is sometimes built as its own mini integration point rather than one flat branch: several smaller
-branches (```v2-intake-stow-fixes```, ```v2-pathplanner```, ```button-bindings```) merge into a bigger branch
-(```v2-bringup```), which itself later merges into a season-long feature branch (```feature-v2```), which finally merges
-into ```development```. Nest branches like this when a feature is big enough that reviewing it as one giant diff against
-```development``` wouldn't be useful to anyone, not by default.
+## Feature and Subfeature Branch Naming
+
+The three student roles described in
+[Roles on the Software Sub-Team](TEAM_DEVELOPMENT.md#roles-on-the-software-sub-team) map directly onto how a
+feature branch's name is built out of slashes:
+
+* A top-level ```<feature>``` branch (e.g. ```v2-shooter```) is owned day to day by a Task Manager, and can be
+  created either by the Lead Software Developer or by the Task Manager themselves. It's branched off
+  ```development```, and it's what eventually gets reviewed by the Lead Software Developer and merged back into
+  ```development```.
+* Underneath it, a Software Developer works in a ```<feature>/<subfeature>``` branch (e.g.
+  ```v2-shooter/flywheel-sysid```), branched off the feature branch instead of off ```development``` directly.
+  This one can be created either by the Task Manager, when they're assigning the subfeature out, or by the
+  Software Developer themselves. Each slash-delimited segment narrows the scope one level further: the branch
+  belongs to whoever owns that segment, and merges back up into the branch one level above it, via its own pull
+  request, not straight into ```development```. The rule behind both bullets is the same one level up: a role can
+  create branches at its own level and at every level beneath it, see
+  [Roles on the Software Sub-Team](TEAM_DEVELOPMENT.md#roles-on-the-software-sub-team).
+* Nothing stops a subfeature from splitting further, ```<feature>/<subfeature>/<sub-subfeature>```, when even a
+  subfeature turns out to be too wide-scoped for one pull request to review sensibly. The rule holds at every
+  level: branch off the level directly above you, and merge back into it, never skip a level.
+
+So for a feature like a 2026 shooter, the chain might look like
+```v2-shooter/flywheel-sysid``` → ```v2-shooter``` → ```development```: two pull requests, each reviewed by
+whoever owns the tier above (a Task Manager approves the first, the Lead Software Developer approves the second).
+This mirrors how a large feature has always been built at Team 190, several smaller branches merging into a
+bigger integration branch before that finally merges into ```development```, for example
+```v2-intake-stow-fixes```, ```v2-pathplanner```, and ```button-bindings``` merging into ```v2-bringup```, which
+itself later merged into a season-long feature branch (```feature-v2```). The slash convention just makes that
+same nesting explicit in the branch name itself, instead of leaving it for a teammate to infer from context. Nest
+branches like this when a feature is big enough that reviewing it as one giant diff against ```development```
+wouldn't be useful to anyone, not by default.
 
 ## Promoting ```development``` to ```main```
 
-Shortly before an event, a mentor or lead student opens a pull request from ```development``` into ```main```, bringing
-the competition branch up to date with everything that's been built and tested since the last event. This is a
-deliberate, reviewed step, not something that happens automatically on every merge, which is exactly why
-```main``` can be trusted to represent "what the robot currently runs" instead of "whatever was merged last."
+Shortly before an event, a mentor and the Lead Software Developer together open a pull request from
+```development``` into ```main```, bringing the competition branch up to date with everything that's been built
+and tested since the last event. Day to day the Lead Software Developer's highest-level integration authority is
+```development```; promoting to ```main``` is the one exception, and it's a joint action with a mentor rather than
+something the Lead Software Developer does alone, see
+[Roles on the Software Sub-Team](TEAM_DEVELOPMENT.md#roles-on-the-software-sub-team). This is a deliberate, reviewed
+step, not something that happens automatically on every merge, which is exactly why ```main``` can be trusted to
+represent "what the robot currently runs" instead of "whatever was merged last."
 
 ## Pull Requests
 
