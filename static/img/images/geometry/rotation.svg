@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowBlue2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#457b9d"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="478" height="398" rx="14" fill="#ffffff" stroke="#d0d5dd" stroke-width="1.5"/>
+  <text x="240" y="28" fill="#1d3557" font-size="16" font-weight="700" text-anchor="middle">Rotation2d: Stored as (cos θ, sin θ)</text>
+
+  <!-- unit circle -->
+  <circle cx="240" cy="230" r="120" fill="none" stroke="#adb5bd" stroke-width="1.5"/>
+  <line x1="90" y1="230" x2="390" y2="230" stroke="#333" stroke-width="1.5"/>
+  <line x1="240" y1="80" x2="240" y2="380" stroke="#333" stroke-width="1.5"/>
+  <text x="395" y="235" fill="#333" font-size="13">+x</text>
+  <text x="240" y="72" fill="#333" font-size="13" text-anchor="middle">+y</text>
+
+  <!-- angle arc -->
+  <path d="M 300 230 A 60 60 0 0 0 286 172" fill="none" stroke="#e63946" stroke-width="2.5"/>
+  <text x="290" y="195" fill="#e63946" font-size="14" font-weight="700">θ</text>
+
+  <!-- radius to point -->
+  <line x1="240" y1="230" x2="331.9" y2="142.8" stroke="#457b9d" stroke-width="3" marker-end="url(#arrowBlue2)"/>
+
+  <!-- component guides -->
+  <line x1="240" y1="230" x2="331.9" y2="230" stroke="#adb5bd" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="331.9" y1="230" x2="331.9" y2="142.8" stroke="#adb5bd" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <text x="286" y="248" fill="#1d3557" font-size="13" text-anchor="middle">cos θ</text>
+  <text x="355" y="188" fill="#1d3557" font-size="13" text-anchor="middle">sin θ</text>
+
+  <circle cx="331.9" cy="142.8" r="4" fill="#1d3557"/>
+  <text x="340" y="130" fill="#1d3557" font-size="13" font-weight="700">(cos θ, sin θ)</text>
+
+  <text x="240" y="365" fill="#555" font-size="12" text-anchor="middle" font-style="italic">
+    composing two rotations is one complex multiply, no manual angle wrapping needed
+  </text>
+</svg>

@@ -1,5 +1,12 @@
 # 🌉 Robot Code Architecture
 
+:::caution Living Documentation
+APIs and control systems change season to season, and sometimes mid-season. Specific class names, file paths, and
+code examples throughout this section reflect FRC 190's codebase at the time of writing and may become outdated or
+obsolete as WPILib, CTRE, and other vendor libraries evolve. Treat this section as a guide to the underlying
+concepts, not a guaranteed match to the current source.
+:::
+
 Every FRC robot program is built on the same skeleton: WPILib's command-based framework. FRC 190 uses that skeleton
 exactly as intended, but wraps a second layer of structure around it so that several robots (two competition bots, a
 practice bot, an offseason robot) can live in one repository and share as much code as possible. This page

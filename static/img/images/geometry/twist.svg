@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowBlue5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#457b9d"/>
+    </marker>
+    <marker id="arrowRed5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e63946"/>
+    </marker>
+    <marker id="arrowGray5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6c757d"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="558" height="358" rx="14" fill="#ffffff" stroke="#d0d5dd" stroke-width="1.5"/>
+  <text x="280" y="28" fill="#1d3557" font-size="16" font-weight="700" text-anchor="middle">Twist2d: a Change in Distance Along an Arc</text>
+
+  <!-- local reference axes at start pose: forward (+x) and left (+y) -->
+  <line x1="90" y1="280" x2="140" y2="280" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arrowGray5)"/>
+  <line x1="90" y1="280" x2="90" y2="230" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arrowGray5)"/>
+  <text x="150" y="284" fill="#6c757d" font-size="12">dx (forward)</text>
+  <text x="60" y="222" fill="#6c757d" font-size="12">dy (left)</text>
+
+  <!-- naive straight-line step -->
+  <line x1="90" y1="280" x2="420" y2="190" stroke="#e63946" stroke-width="2.5" stroke-dasharray="6,5" marker-end="url(#arrowRed5)"/>
+  <text x="230" y="260" fill="#e63946" font-size="12" font-weight="700">naive straight-line step (wrong)</text>
+
+  <!-- actual arc path -->
+  <path d="M 90 280 Q 270 150 420 190" fill="none" stroke="#457b9d" stroke-width="3.5" marker-end="url(#arrowBlue5)"/>
+  <text x="230" y="150" fill="#457b9d" font-size="12" font-weight="700">actual arc the twist integrates along</text>
+
+  <!-- start robot -->
+  <g transform="translate(90,280) rotate(90)">
+    <polygon points="0,-16 11,10 -11,10" fill="#1d3557" stroke="#1d3557" stroke-width="1.5"/>
+  </g>
+  <text x="60" y="310" fill="#1d3557" font-size="12">start pose</text>
+
+  <!-- end robot, rotated by dtheta -->
+  <g transform="translate(420,190) rotate(55)">
+    <polygon points="0,-16 11,10 -11,10" fill="#1d3557" stroke="#1d3557" stroke-width="1.5"/>
+  </g>
+  <text x="400" y="220" fill="#1d3557" font-size="12">end pose (rotated by dθ)</text>
+
+  <text x="280" y="340" fill="#555" font-size="12" text-anchor="middle" font-style="italic">
+    exp() solves for the arc a constant twist traces, see Controls Engineering in FRC, section 10.2
+  </text>
+</svg>
