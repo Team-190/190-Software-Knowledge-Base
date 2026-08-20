@@ -66,7 +66,9 @@ All the following are unacceptable uses for AI in FRC 190 software development:
 
 Every FRC 190 repository provides a pull request template with sections already stubbed out for the items below. Use it
 instead of writing the PR description from scratch; opening a PR against a Team-190 repo should pre-fill these sections
-for you, and they just need to be filled in rather than deleted.
+for you, and they just need to be filled in rather than deleted. The PR's title still follows the normal tagging
+convention regardless of how much AI assistance went into it, see
+[Issue and Pull Request Title Prefixes](GIT_STANDARDS.md#issue-and-pull-request-title-prefixes).
 
 * Disclosure statement in the following format from
   the [Linux kernel](https://docs.kernel.org/process/coding-assistants.html), placed in the pull request description

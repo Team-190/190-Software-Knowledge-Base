@@ -20,7 +20,7 @@ Content lives under `docs/`, organized into sections that build on each other:
 * **Networking** — IP addressing, ports/transport, DNS, FRC network topology, NetworkTables
 * **Vision & Localization** — odometry, cameras, vision processing, coordinate frames, pose
   estimation, sensor fusion, latency
-* **Software Engineering Practices** — version control, code quality, team development,
+* **Software Engineering Practices** — git standards, code quality, team development,
   contributing guidelines, AI policy
 
 Sidebar ordering and grouping is defined in `sidebars.ts`; it's the source of truth for how pages
