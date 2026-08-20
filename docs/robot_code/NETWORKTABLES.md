@@ -1,5 +1,12 @@
 # 📶 NetworkTables
 
+:::caution Living Documentation
+APIs and control systems change season to season, and sometimes mid-season. Specific class names, file paths, and
+code examples throughout this section reflect FRC 190's codebase at the time of writing and may become outdated or
+obsolete as WPILib, CTRE, and other vendor libraries evolve. Treat this section as a guide to the underlying
+concepts, not a guaranteed match to the current source.
+:::
+
 [Ethernet](../controls/hardware_communication/ETHERNET.md) is what physically carries data between the roboRIO, a
 Driver Station laptop, and any coprocessors mounted on the robot, but wiring alone doesn't define what the bytes
 flowing over it actually *mean*. **NetworkTables** is the application-level protocol FRC builds on top of that wiring:
