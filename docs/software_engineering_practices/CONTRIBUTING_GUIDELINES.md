@@ -1,6 +1,6 @@
 # 📝 Contributing Guidelines
 
-[Version Control](VERSION_CONTROL.md), [Code Quality](CODE_QUALITY.md), and [Team Development](TEAM_DEVELOPMENT.md)
+[Git Standards](GIT_STANDARDS.md), [Code Quality](CODE_QUALITY.md), and [Team Development](TEAM_DEVELOPMENT.md)
 cover *why* the team works the way it does. This page is the practical checklist for actually making your first
 change: getting access, setting up your machine, and shipping a pull request that a reviewer can say yes to.
 
@@ -47,11 +47,11 @@ nobody can merge.
 
 1. **Branch off whatever your work actually builds on.** Most of the time that's the feature branch your work
    belongs to, with your own branch following the ```<feature>/<subfeature>/...``` naming convention, see
-   [Feature and Subfeature Branch Naming](VERSION_CONTROL.md#feature-and-subfeature-branch-naming) for how that's
+   [Feature and Subfeature Branch Naming](GIT_STANDARDS.md#feature-and-subfeature-branch-naming) for how that's
    named; an event or fix/testing branch instead comes straight off ```development```, see
-   [Topic Branches](VERSION_CONTROL.md#topic-branches). ```development``` is where the season's work lives day to
+   [Topic Branches](GIT_STANDARDS.md#topic-branches). ```development``` is where the season's work lives day to
    day; ```main``` is only touched right before an event, see
-   [Version Control](VERSION_CONTROL.md#two-long-lived-branches-main-and-development).
+   [Git Standards](GIT_STANDARDS.md#two-long-lived-branches-main-and-development).
 2. **Write the change.** Follow the patterns already established in the codebase, see
    [Subsystem State Management](../robot_code/SUBSYSTEM_STATE_MANAGEMENT.md) and
    [Hardware Abstraction](../robot_code/HARDWARE_ABSTRACTION.md) for how subsystems in this codebase are expected
@@ -67,8 +67,10 @@ nobody can merge.
 
 * Push your branch and open a PR against whatever it branched off of, that's not always ```development```, a
   subfeature branch's PR targets its feature branch first, see
-  [Feature and Subfeature Branch Naming](VERSION_CONTROL.md#feature-and-subfeature-branch-naming). Then request
+  [Feature and Subfeature Branch Naming](GIT_STANDARDS.md#feature-and-subfeature-branch-naming). Then request
   review from whoever owns that branch.
+* Title it with the same tag as the issue it closes, ```[Tag] Title```, see
+  [Issue and Pull Request Title Prefixes](GIT_STANDARDS.md#issue-and-pull-request-title-prefixes).
 * If it's not finished yet, open it as a **draft** so you're not triggering CI or requesting review prematurely.
 * Write a description that tells a reviewer *what* changed and *why*, not just "updates". If the change is hard to
   explain in a sentence, that's often a sign it should have been two smaller PRs instead of one.

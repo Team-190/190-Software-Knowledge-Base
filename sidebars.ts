@@ -436,10 +436,10 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'category',
-          label: '🔀 Version Control',
+          label: '🔀 Git Standards',
           link: {
             type: 'doc',
-            id: 'software_engineering_practices/VERSION_CONTROL',
+            id: 'software_engineering_practices/GIT_STANDARDS',
           },
           collapsed: true,
           items: [],

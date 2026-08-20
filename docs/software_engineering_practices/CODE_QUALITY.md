@@ -30,8 +30,9 @@ and push again.
 
 ## Automated Checks on Every Pull Request
 
-Opening a pull request in ```2kxx-Robot-Code``` or ```GompeiLib``` triggers two GitHub Actions workflows before a
-human ever looks at the code:
+Opening a pull request in ```2kxx-Robot-Code``` or ```GompeiLib``` (see [Git Standards](GIT_STANDARDS.md#pull-requests)
+for how a PR gets opened in the first place) triggers two GitHub Actions workflows before a human ever looks at the
+code:
 
 | Workflow | What it checks |
 |----------|-----------------|

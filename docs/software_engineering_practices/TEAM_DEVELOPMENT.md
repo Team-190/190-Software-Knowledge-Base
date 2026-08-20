@@ -21,7 +21,7 @@ here so the next person doesn't need you to repeat it.
 
 Not everyone on the software sub-team is doing the same job at the same time. Three student roles form a ladder,
 each stepping up in scope, and each tied to a level of the git branch hierarchy, see
-[Feature and Subfeature Branch Naming](VERSION_CONTROL.md#feature-and-subfeature-branch-naming) for how that
+[Feature and Subfeature Branch Naming](GIT_STANDARDS.md#feature-and-subfeature-branch-naming) for how that
 hierarchy shows up in a branch name itself. These roles aren't rigid job titles, they shift as students gain
 experience, sometimes within the same season. The point of naming them is that when you open a pull request, it
 should be clear who you expect to review it and why.
@@ -29,6 +29,8 @@ should be clear who you expect to review it and why.
 Two rules repeat at every level of the ladder below: a role creates the GitHub issues for the role beneath it,
 never for itself, and a role can create branches for its own level and for every level beneath it. A Software
 Developer sits at the bottom of both, so they never create their own issues, but they do create their own branch.
+Whoever creates an issue is also the one who picks its title tag, see
+[Issue and Pull Request Title Prefixes](GIT_STANDARDS.md#issue-and-pull-request-title-prefixes).
 
 ### Software Developer
 
@@ -116,7 +118,7 @@ The Lead Software Developer has final student authority over software architectu
 bypass the review process. Day to day, their highest-level integration authority is ```development```: promoting
 ```development``` to ```main``` is the one exception, and it isn't theirs to do alone, a mentor and the Lead
 Software Developer promote ```main``` together, see
-[Promoting development to main](VERSION_CONTROL.md#promoting-development-to-main).
+[Promoting development to main](GIT_STANDARDS.md#promoting-development-to-main).
 
 ## Code Review Is a Teaching Tool, Not Just a Gate
 
@@ -153,7 +155,7 @@ things from how the team develops software:
 * **During build season**, the priority is shipping a working robot. Feature branches move fast, event branches
   exist for last-minute, at-competition tuning, and code review needs to happen quickly without becoming a
   bottleneck. All of that still lands on ```development```, not ```main```, see
-  [Version Control](VERSION_CONTROL.md#two-long-lived-branches-main-and-development); ```main``` only gets updated
+  [Git Standards](GIT_STANDARDS.md#two-long-lived-branches-main-and-development); ```main``` only gets updated
   once, right before the event, when a mentor and the Lead Software Developer together promote ```development```
   up to it, see [Roles on the Software Sub-Team](#roles-on-the-software-sub-team).
 * **In the off-season**, there's room to do the things build season never has time for: paying down technical debt
