@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowBlue4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#457b9d"/>
+    </marker>
+    <marker id="arrowRed4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e63946"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="558" height="378" rx="14" fill="#ffffff" stroke="#d0d5dd" stroke-width="1.5"/>
+  <text x="280" y="28" fill="#1d3557" font-size="16" font-weight="700" text-anchor="middle">Transform2d: a Relative Offset Between Two Poses</text>
+
+  <!-- field frame axes -->
+  <line x1="60" y1="330" x2="60" y2="80" stroke="#333" stroke-width="2"/>
+  <line x1="60" y1="330" x2="500" y2="330" stroke="#333" stroke-width="2"/>
+  <text x="505" y="334" fill="#333" font-size="12">+x (field)</text>
+  <circle cx="60" cy="330" r="3.5" fill="#333"/>
+
+  <!-- fieldToRobot -->
+  <line x1="60" y1="330" x2="200" y2="220" stroke="#adb5bd" stroke-width="2" stroke-dasharray="5,4"/>
+  <text x="85" y="260" fill="#1d3557" font-size="12">fieldToRobot (Pose2d)</text>
+
+  <!-- robot pose -->
+  <g transform="translate(200,220) rotate(-20)">
+    <polygon points="0,-22 15,14 -15,14" fill="#457b9d" stroke="#1d3557" stroke-width="2"/>
+  </g>
+  <text x="150" y="195" fill="#1d3557" font-size="12" font-weight="700">Robot</text>
+
+  <!-- robotToCamera transform -->
+  <line x1="200" y1="220" x2="360" y2="130" stroke="#e63946" stroke-width="3" marker-end="url(#arrowRed4)"/>
+  <text x="230" y="155" fill="#e63946" font-size="13" font-weight="700">robotToCamera (Transform2d)</text>
+
+  <!-- camera pose -->
+  <circle cx="360" cy="130" r="5" fill="#1d3557"/>
+  <text x="368" y="120" fill="#1d3557" font-size="12" font-weight="700">Camera</text>
+
+  <!-- resulting fieldToCamera, dotted long arrow -->
+  <line x1="60" y1="330" x2="360" y2="130" stroke="#457b9d" stroke-width="2" stroke-dasharray="2,5" marker-end="url(#arrowBlue4)"/>
+
+  <text x="280" y="360" fill="#555" font-size="13" text-anchor="middle" font-style="italic">
+    fieldToRobot + robotToCamera = fieldToCamera
+  </text>
+</svg>

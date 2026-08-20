@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#457b9d"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="478" height="358" rx="14" fill="#ffffff" stroke="#d0d5dd" stroke-width="1.5"/>
+  <text x="240" y="28" fill="#1d3557" font-size="16" font-weight="700" text-anchor="middle">Translation2d: a Displacement Vector</text>
+
+  <!-- axes -->
+  <line x1="70" y1="300" x2="70" y2="60" stroke="#333" stroke-width="2"/>
+  <line x1="70" y1="300" x2="420" y2="300" stroke="#333" stroke-width="2"/>
+  <text x="425" y="304" fill="#333" font-size="13">+x</text>
+  <text x="60" y="55" fill="#333" font-size="13" text-anchor="middle">+y</text>
+  <circle cx="70" cy="300" r="3.5" fill="#333"/>
+  <text x="55" y="320" fill="#555" font-size="12" text-anchor="middle">(0, 0)</text>
+
+  <!-- component guides -->
+  <line x1="330" y1="300" x2="330" y2="140" stroke="#adb5bd" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="70" y1="140" x2="330" y2="140" stroke="#adb5bd" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- vector -->
+  <line x1="70" y1="300" x2="323" y2="140" stroke="#457b9d" stroke-width="3.5" marker-end="url(#arrowBlue)"/>
+
+  <text x="195" y="292" fill="#e63946" font-size="13" text-anchor="middle">x</text>
+  <text x="345" y="222" fill="#e63946" font-size="13" text-anchor="middle">y</text>
+  <circle cx="330" cy="140" r="4" fill="#1d3557"/>
+  <text x="340" y="130" fill="#1d3557" font-size="13" font-weight="700">Translation2d(x, y)</text>
+
+  <text x="240" y="340" fill="#555" font-size="12" text-anchor="middle" font-style="italic">
+    no orientation attached, just how far and which way from the origin
+  </text>
+</svg>
