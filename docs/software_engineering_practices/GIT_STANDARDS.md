@@ -129,26 +129,31 @@ moment described below, not for day-to-day feature work.
 
 Nobody writes code directly on ```development``` either, all work still happens on a separate branch first, it's just
 that the branch's destination is ```development``` instead of ```main```. Looking at the history of
-```2kxx-Robot-Code```, branch names generally fall into a few categories:
+```2kxx-Robot-Code```, branch names fall into two categories:
 
 * **Feature branches**: named after the thing being built, always starting with ```feature-```, e.g.
-  ```feature-v2-shooter``` or ```feature-v2-intake-stow-fixes```. Branched off ```development```, and merged back into
-  it once the feature works. Used for season-long development work that isn't tied to a specific competition. Anything
-  underneath a feature branch follows a stricter, slash-based naming convention, see
+  ```feature-v2-shooter/main``` or ```feature-v2-intake-stow-fixes/main```. Branched off ```development```, and
+  merged back into it once the feature works. Used for season-long development work that isn't tied to a specific
+  competition. Anything underneath a feature branch follows a stricter, slash-based naming convention, see
   [Feature and Subfeature Branch Naming](#feature-and-subfeature-branch-naming) below.
 * **Event branches**: named after the competition being prepared for, always starting with ```event-```, e.g.
   ```event-bc-turnover``` or ```event-mawor```. Used for the tuning and bugfixing that happens in the days leading up
   to and during an event, where changes need to be fast, isolated, and easy to throw away if they don't work out.
   These also merge back into ```development```, keeping whatever worked at that event as part of the ongoing codebase.
-* **Fix / testing branches**: smaller, targeted branches for a single focused change, prefixed with ```fix-``` for a
-  bug fix or targeted correction (e.g. ```fix-climber-pids```) or ```testing-``` for a one-off experiment or trial
-  change (e.g. ```testing-button-bindings```).
 
-Every topic branch name starts with one of these four prefixes, no exceptions: ```feature-```, ```event-```,
-```fix-```, or ```testing-```, so nothing merges into ```development``` under an unprefixed, unclassifiable name.
-Within that, the rest of the name should still tell a teammate what the branch is *for* at a glance, a branch called
-```fix-patch1``` is barely better than ```patch1```; ```fix-climber-pids``` tells the next person something real.
-Feature branches carry an additional, stricter convention on top of the prefix, described next.
+There's no separate ```fix-``` or ```testing-``` category anymore. A small isolated fix or one-off experiment now
+gets nested under whichever ```feature-<feature>/...``` or ```event-<event>``` branch it's actually closest to, for
+example ```feature-v2-shooter/fix-flywheel-units``` or ```event-mawor/testing-button-bindings```, instead of
+branching directly off ```development``` on its own.
+
+This isn't just a naming convention, GitHub enforces it directly. A **ruleset** on ```2kxx-Robot-Code``` blocks the
+*creation* of any branch that isn't ```main```, ```development```, an ```event-*``` branch, or something nested
+under a ```feature-*``` branch (matching ```feature-*/**```), with no exceptions for anyone, including mentors. Push
+a bare, unprefixed branch, or an old-style ```fix-``` / ```testing-``` branch off ```development```, and GitHub
+rejects the branch outright, before a pull request is even possible. Within the allowed shapes, the rest of the name
+should still tell a teammate what the branch is *for* at a glance, a subfeature called ```feature-v2-shooter/fix1```
+is barely better than ```patch1```; ```feature-v2-shooter/fix-flywheel-units``` tells the next person something
+real. Feature branches carry an additional, stricter convention on top of the prefix, described next.
 
 ## Feature and Subfeature Branch Naming
 
@@ -156,31 +161,33 @@ The three student roles described in
 [Roles on the Software Sub-Team](TEAM_DEVELOPMENT.md#roles-on-the-software-sub-team) map directly onto how a
 feature branch's name is built out of slashes:
 
-* A top-level ```feature-<feature>``` branch (e.g. ```feature-v2-shooter```) is owned day to day by a Task Manager,
-  and can be created either by the Lead Software Developer or by the Task Manager themselves. It's branched off
-  ```development```, and it's what eventually gets reviewed by the Lead Software Developer and merged back into
-  ```development```. The ```feature-``` prefix only ever appears once, at the very front, it isn't repeated at each
-  slash-delimited tier below it.
+* A top-level ```feature-<feature>/main``` branch (e.g. ```feature-v2-shooter/main```) is owned day to day by a Task
+  Manager, and can be created either by the Lead Software Developer or by the Task Manager themselves. It's branched
+  off ```development```, and it's what eventually gets reviewed by the Lead Software Developer and merged back into
+  ```development```. This is backed by a GitHub ruleset, not just convention, creating or deleting a
+  ```feature-*/main``` branch is restricted to the Lead Software Developer/mentor GitHub team and the Task Manager
+  GitHub team specifically, nobody else can push one into existence. The ```feature-``` prefix only ever appears
+  once, at the very front, it isn't repeated at each slash-delimited tier below it.
 * Underneath it, a Software Developer works in a ```feature-<feature>/<subfeature>``` branch (e.g.
-  ```feature-v2-shooter/flywheel-sysid```), branched off the feature branch instead of off ```development``` directly.
-  This one can be created either by the Task Manager, when they're assigning the subfeature out, or by the
-  Software Developer themselves. Each slash-delimited segment narrows the scope one level further: the branch
-  belongs to whoever owns that segment, and merges back up into the branch one level above it, via its own pull
-  request, not straight into ```development```. The rule behind both bullets is the same one level up: a role can
-  create branches at its own level and at every level beneath it, see
+  ```feature-v2-shooter/flywheel-sysid```), branched off ```feature-<feature>/main``` instead of off
+  ```development``` directly. This one can be created either by the Task Manager, when they're assigning the
+  subfeature out, or by the Software Developer themselves. Each slash-delimited segment narrows the scope one level
+  further: the branch belongs to whoever owns that segment, and merges back up into the branch one level above it,
+  via its own pull request, not straight into ```development```. The rule behind both bullets is the same one level
+  up: a role can create branches at its own level and at every level beneath it, see
   [Roles on the Software Sub-Team](TEAM_DEVELOPMENT.md#roles-on-the-software-sub-team).
 * Nothing stops a subfeature from splitting further, ```feature-<feature>/<subfeature>/<sub-subfeature>```, when even
   a subfeature turns out to be too wide-scoped for one pull request to review sensibly. The rule holds at every
   level: branch off the level directly above you, and merge back into it, never skip a level.
 
 So for a feature like a 2026 shooter, the chain might look like
-```feature-v2-shooter/flywheel-sysid``` → ```feature-v2-shooter``` → ```development```: two pull requests, each
+```feature-v2-shooter/flywheel-sysid``` → ```feature-v2-shooter/main``` → ```development```: two pull requests, each
 reviewed by whoever owns the tier above (a Task Manager approves the first, the Lead Software Developer approves the
 second). This mirrors how a large feature has always been built at Team 190, several smaller branches merging into a
 bigger integration branch before that finally merges into ```development```, for example
 ```feature-v2-bringup/intake-stow-fixes```, ```feature-v2-bringup/pathplanner```, and
-```feature-v2-bringup/button-bindings``` merging into ```feature-v2-bringup```, which itself later merged into a
-season-long feature branch (```feature-v2```). The slash convention just makes that
+```feature-v2-bringup/button-bindings``` merging into ```feature-v2-bringup/main```, which itself later merged into
+a season-long feature branch (```feature-v2/main```). The slash convention just makes that
 same nesting explicit in the branch name itself, instead of leaving it for a teammate to infer from context. Nest
 branches like this when a feature is big enough that reviewing it as one giant diff against ```development```
 wouldn't be useful to anyone, not by default.
@@ -194,7 +201,10 @@ and tested since the last event. Day to day the Lead Software Developer's highes
 something the Lead Software Developer does alone, see
 [Roles on the Software Sub-Team](TEAM_DEVELOPMENT.md#roles-on-the-software-sub-team). This is a deliberate, reviewed
 step, not something that happens automatically on every merge, which is exactly why ```main``` can be trusted to
-represent "what the robot currently runs" instead of "whatever was merged last."
+represent "what the robot currently runs" instead of "whatever was merged last." GitHub rulesets back this up too:
+(re)creating either ```main``` or ```development``` from scratch is restricted to the Lead Software Developer/mentor
+GitHub team, and every pull request into either one needs an approval from that same team before it can merge, so
+neither branch can quietly get reset or merged into by anyone else.
 
 ## Pull Requests
 
@@ -231,12 +241,12 @@ kind of branch is about to get created for it, before that branch exists:
 
 | Tag             | Used for                                                                                                                | Branch type                                                                                    |
 |------------------|--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| ```[Feature]```  | Season-long feature or subfeature work: a subsystem, an autonomous routine, a button layout, anything with a ```<feature>``` or ```<feature>/<subfeature>``` branch. | Feature branch                                                                                   |
+| ```[Feature]```  | Season-long feature or subfeature work: a subsystem, an autonomous routine, a button layout, anything with a ```<feature>/main``` or ```<feature>/<subfeature>``` branch. | Feature branch                                                                                   |
 | ```[Event]```    | Tuning and bugfixing tied to a specific competition, opened and closed inside that event's window.                       | Event branch                                                                                      |
-| ```[Fix]```      | A small, isolated bug fix or targeted change that doesn't belong to a feature or an event.                                | Fix / testing branch                                                                              |
-| ```[Refactor]``` | Off-season restructuring or technical debt that isn't tied to any single feature, see [Season Pace vs. Off-Season Pace](TEAM_DEVELOPMENT.md#season-pace-vs-off-season-pace). | Fix / testing branch, or a feature branch if the rework is large enough to warrant one            |
-| ```[Docs]```     | Documentation-only changes: this knowledge base, or in-code Javadoc and READMEs.                                          | Fix / testing branch                                                                              |
-| ```[Test]```     | Test-only changes, most commonly ```GompeiLib``` unit tests, see [Unit Testing](../robot_code/gompeilib/UNIT_TESTING.md). | Fix / testing branch                                                                              |
+| ```[Fix]```      | A small, isolated bug fix or targeted change that doesn't belong to a feature or an event.                                | Nested under the closest feature or event branch, see [Topic Branches](#topic-branches)           |
+| ```[Refactor]``` | Off-season restructuring or technical debt that isn't tied to any single feature, see [Season Pace vs. Off-Season Pace](TEAM_DEVELOPMENT.md#season-pace-vs-off-season-pace). | Nested under the closest feature or event branch, or its own ```feature-<name>/main``` if the rework is large enough to warrant one |
+| ```[Docs]```     | Documentation-only changes: this knowledge base, or in-code Javadoc and READMEs.                                          | Nested under the closest feature or event branch                                                  |
+| ```[Test]```     | Test-only changes, most commonly ```GompeiLib``` unit tests, see [Unit Testing](../robot_code/gompeilib/UNIT_TESTING.md). | Nested under the closest feature or event branch                                                  |
 
 A subfeature issue keeps its parent feature's ```[Feature]``` tag rather than getting a tag of its own, the slash in
 the branch name (```<feature>/<subfeature>```) is what narrows the scope, not the title prefix, see

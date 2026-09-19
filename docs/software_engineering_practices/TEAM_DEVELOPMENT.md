@@ -160,7 +160,7 @@ things from how the team develops software:
   up to it, see [Roles on the Software Sub-Team](#roles-on-the-software-sub-team).
 * **In the off-season**, there's room to do the things build season never has time for: paying down technical debt
   in ```GompeiLib```, writing the unit tests that season code skips, prototyping a "v2" of a mechanism
-  (```feature-v2-bringup```, ```testing-turret```), and updating this knowledge base itself.
+  (```feature-v2-bringup/main```, ```feature-v2-bringup/testing-turret```), and updating this knowledge base itself.
 
 Knowing which mode the team is in should shape how much process you expect around a given change. Insisting on the
 same level of ceremony for an event-branch hotfix as for an off-season refactor slows down the wrong thing at the
