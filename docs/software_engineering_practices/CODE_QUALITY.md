@@ -11,7 +11,7 @@ Every repository (```2kxx-Robot-Code```, ```GompeiLib```, and ```GompeiVision```
 [Spotless](https://github.com/diffplug/spotless) Gradle plugin to enforce one consistent code style, so that
 whoever wrote a file doesn't matter, it looks the same either way. Spotless is configured to:
 
-* Format all ```.java``` files with **Google Java Format**.
+* Format all ```.java``` files with [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html).
 * Remove unused imports automatically.
 * Trim trailing whitespace.
 * Ensure every file ends with a newline.
