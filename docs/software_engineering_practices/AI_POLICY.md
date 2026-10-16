@@ -70,6 +70,12 @@ for you, and they just need to be filled in rather than deleted. The PR's title 
 convention regardless of how much AI assistance went into it, see
 [Issue and Pull Request Title Prefixes](GIT_STANDARDS.md#issue-and-pull-request-title-prefixes).
 
+::::note
+Please do not use AI to complete AI disclosure forms. This step is meant to force an understanding of AI's
+resource utilization in a broader global context, so using AI to do it is counterproductive to the point of the
+exercise.
+:::
+
 * Disclosure statement in the following format from
   the [Linux kernel](https://docs.kernel.org/process/coding-assistants.html), placed in the pull request description
   with one line per tool used:
@@ -108,7 +114,7 @@ convention regardless of how much AI assistance went into it, see
   session:
 
   | Metric          | Estimate                        | Context                                                     | Source                                                                                                                                                                                     |
-    |-----------------|---------------------------------|-------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+      |-----------------|---------------------------------|-------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
   | Session         | 1:10 hr claude-sonnet-5 session | N/A                                                         | N/A, directly observed                                                                                                                                                                     |
   | Input tokens    | ~9.1k                           | Roughly a 11-page book you skimmed/read                     | https://help-lb.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them, https://theplanettools.ai/blog/ai-model-pricing-explained-input-output-cached-tokens-2026            |
   | Output tokens   | ~174.5k                         | Roughly a 217-page book you wrote                           | https://help-lb.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them, https://theplanettools.ai/blog/ai-model-pricing-explained-input-output-cached-tokens-2026            |
